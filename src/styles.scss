@@ -3,5 +3,183 @@
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root{
+    // --wallet-boxShadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    // --box-border: 1px solid rgba(0, 0, 0, 0.05);
+    --wa-icon-gradient: linear-gradient(169.24deg, rgba(77, 166, 174, 0.12) 0.53%, rgba(75, 126, 165, 0.09) 46.77%, rgba(73, 72, 153, 0.12) 90.1%);
+    --wa-box-background: rgba(245, 245, 255, 0.2);
+    --wa-box-shadow:  0px 4px 10px rgba(154, 171, 237, 0.06);
+    --wa-commonlyused-font: 'IBM Plex Light';
+}
+
+@font-face {
+    font-family: 'IBM Plex Light';
+    src: url('./assets/fonts/IBMPlexSans-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Light Italic';
+    src: url('./assets/fonts/IBMPlexSans-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IBM Plex Medium';
+    src: url('./assets/fonts/IBMPlexSans-Medium.ttf');
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IBM Plex SemiBold';
+    src: url('./assets/fonts/IBMPlexSans-SemiBold.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex SemiBold Italic';
+    src: url('./assets/fonts/IBMPlexSans-SemiBoldItalic.ttf');
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'IBM Plex ExtraLight';
+    src: url('./assets/fonts/IBMPlexSans-ExtraLight.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex ExtraLight Italic';
+    src: url('./assets/fonts/IBMPlexSans-ExtraLightItalic.ttf');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IBM Plex Bold';
+    src: url('./assets/fonts/IBMPlexSans-Bold.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IBM Plex Bold Italic';
+    src: url('./assets/fonts/IBMPlexSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.main_container{
+    @apply w-10/12 h-full border-4 border-purple-400 px-6 bg-white;
+
+    & .header{
+        @apply h-auto mb-3;
+
+        & .header_contents{
+            font-family: var(--wa-commonlyused-font);
+            @apply h-24 w-full border-b-2 border-b-[#ececff] flex items-end pb-4;
+
+            & .notifications_and_dropDown{
+                @apply flex-auto flex justify-end items-center mx-1;
+            }
+
+            & .salutation{
+                font-family: 'IBM Plex Medium';
+                font-size: 1.375rem;
+                @apply px-1 flex-grow;
+            }
+
+            & .profile_pic{
+                @apply  ml-8 mr-4
+            }
+
+            & .name_details{
+                font-size: .975rem;
+                @apply flex justify-between items-center font-semibold;
+            }
+        
+        }
+    }
+}
+
+// general styles here
+
+.routed_components{
+    & .verification_incomplete{
+        font-family: var(--wa-commonlyused-font);
+        @apply h-40 w-full mt-5 border-t-2 border-wa-border-top-color flex;
+
+        & .text_half{
+            @apply flex flex-grow justify-start flex-col bg-slate-400;
+
+            & p{
+                @apply flex w-20 w-auto justify-start
+            }
+        }
+
+    }
+}
+
+.sideBar_container{
+    @apply  w-2/12 h-full border-2 border-red-400;
+}
+
+
+
+// sidebar styles here
+
+
+.sideBar_contents{
+    background-color: rgba(245, 245, 255, 0.4);
+    @apply  w-full h-full px-5;
+
+    & .image_container{
+        @apply  h-1/6 w-full flex justify-center items-center;
+
+        & img{
+            width: 70%;
+            max-width: 80%;
+            
+        }
+    }
+
+    & .other_contents{
+        @apply  h-5/6 w-full pt-5;
+
+        & ul{
+            background-color: var(--wa-box-background);
+            @apply px-1 w-full h-full;
+        }
+
+        & li{
+            font-family: var(--wa-commonlyused-font);
+            @apply px-2 py-2 font-semibold w-full flex items-center my-3;
+
+            & span{
+                @apply mr-3;
+            }
+
+            &.active{
+                box-shadow: var(--wa-box-shadow);
+                @apply bg-white rounded-lg border-2 border-white text-wa-generalGreen;
+            
+            }
+
+           & .chevron_down img{
+                width: 95%;
+           }
+        }
+    }
+}
+// ends here

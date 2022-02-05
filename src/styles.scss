@@ -81,10 +81,10 @@
 
 
 .main_container{
-    @apply w-10/12 h-full border-4 border-purple-400 px-6 bg-white;
+    @apply w-10/12 h-full  px-6 bg-white;
 
     & .header{
-        @apply h-auto mb-3;
+        @apply h-auto mb-3 px-3;
 
         & .header_contents{
             font-family: var(--wa-commonlyused-font);
@@ -116,23 +116,210 @@
 // general styles here
 
 .routed_components{
+    // hide scroll width but allow scrolling
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    @apply w-full h-screen overflow-auto px-3 ;
+    
     & .verification_incomplete{
         font-family: var(--wa-commonlyused-font);
-        @apply h-40 w-full mt-5 border-t-2 border-wa-border-top-color flex;
+        background-color: rgba(245, 245, 255, 0.4);
+        @apply h-40 w-full mt-5 border-t-2 rounded-sm border-wa-border-top-color flex gap-x-5;
 
         & .text_half{
-            @apply flex flex-grow justify-start flex-col bg-slate-400;
+            // font-family: var(--wa-commonlyused-font);
+            @apply flex flex-grow justify-start  px-4 pt-4 gap-3;
 
             & p{
                 @apply flex w-20 w-auto justify-start
             }
+
+            & .thank_you{
+                font-size: 1.075rem;
+                font-family: 'IBM Plex Medium';
+                @apply font-normal mb-2;
+            }
+
+            & p:nth-child(2){
+                font-size: .875rem;
+                @apply font-normal mb-4;
+            }
+
+            & p:nth-child(3){
+                font-size: 1.075rem;
+                font-family: 'IBM Plex ExtraLight';
+                @apply font-semibold;
+
+                & a{
+                    font-family: 'IBM Plex Medium';
+                    @apply font-normal px-1;
+                }
+            }
         }
 
+        & .black_box{
+            @apply mx-10 pt-5;
+
+            &__contents{
+                @apply bg-black pr-7 pl-5 py-4 text-white rounded-lg;
+                & p:nth-child(1){
+                    @apply flex mb-3;
+
+                    & img{
+                        @apply pr-4;
+                    }
+                }   
+
+                & p:nth-child(2){
+                    font-size: 1.005rem;
+                    @apply pl-10 underline text-wa-generalGreen;
+                }
+
+            }
+        }
+
+
+    }
+
+    & .wallet_Balance{
+        font-family: var(--wa-commonlyused-font);
+        @apply mt-6;
+
+        &__contents{
+            @apply flex gap-8 w-full;
+
+            & div{
+                @apply w-1/2 h-40;
+            }
+
+            & div:nth-child(1){
+                @apply flex;
+            }
+
+            & .wallet_balance_figures, .fund_wallet_container{
+                @apply h-full py-2;
+            }
+
+            & .wallet_balance_figures{
+                @apply flex flex-col px-1;
+
+                & p:nth-child(1){
+                    font-family: 'IBM Plex ExtraLight';
+                    @apply flex gap-3 font-semibold;
+                }
+
+                & p:nth-child(2){
+                    font-family: 'IBM Plex Medium';
+                    line-height: .7;
+                    font-size: 2.175rem;
+                    @apply  font-extrabold text-wa-purple-text-color;
+                }
+            }
+
+            & .fund_wallet_container{
+                @apply py-5 px-2 flex justify-center items-start;
+
+                &__button{
+                    @apply px-8 py-2 bg-wa-generalGreen text-wa-purple-text-color border border-wa-generalGreen rounded-[4px] font-bold;
+                }
+            }
+
+            & .mini_transactions__display{
+                & .second_box__container {
+                    @apply w-full  py-3 px-3 border-2 border-wa-border-box-color rounded-[7px] flex flex-col;
+                }
+
+                & .form-group{
+                    @apply mb-1 w-full flex justify-end h-auto;
+
+                    & select{
+                        line-height: 1rem;
+                        background-color: rgba(245, 245, 255, 0.4);
+                        border: 1px solid rgba(245, 245, 255, 0.4);
+                        @apply rounded-[3px] h-[2.2rem];
+                    }
+                }
+
+                & .second_box__container div:nth-child(2){
+                    @apply w-full flex h-full justify-around items-center;
+                }
+                & .second_box__container p{
+                    font-size: .95rem;
+                    font-family: 'IBM Plex ExtraLight';
+                    @apply relative font-semibold capitalize after:absolute after:w-[1px] after:bg-[#F2F2F2] after:h-full after:rotate-180 after:-top-2 after:-right-16;
+                    
+                    & span:nth-child(2){
+                        font-family: 'IBM Plex Medium';
+                    }
+                    &.noPseudoClass{
+                        @apply after:hidden;
+                    }
+                  }
+            }
+        }
+    }
+
+    & .actions_section{
+        font-family: var(--wa-commonlyused-font);
+        @apply mt-8 mb-12 w-full;
+
+        &__title{
+            font-family: 'IBM Plex Medium';
+            font-size: 1.175rem;
+            @apply mb-5 text-wa-active-text px-1;
+        }
+
+        &__gridparent{
+            @apply grid grid-cols-4 grid-rows-1 gap-5;
+
+            & .grid_child{
+                background-color: rgba(245, 245, 255, 0.4);
+                @apply h-40 w-full border-2 border-wa-border-box-color rounded-[7px] flex flex-col justify-center items-center;
+
+                & p{
+                    @apply font-semibold mt-5 text-wa-purple-text-color;
+                }
+
+                &.label{
+                    @apply relative;
+                    & span:nth-child(3) {
+                        @apply absolute bg-wa-generalGreen text-white px-5 text-sm -right-[2px] rounded rounded-tr-none rounded-br-none top-2;
+                    }
+                }
+                
+            }
+        }
+    }
+
+
+    & .recent_transactions{
+        @apply h-auto mb-10;
+
+        &__contents{
+          @apply  w-full min-h-[20rem] max-h-[23rem] border border-wa-border-box-color rounded-t-[7px];
+        }
+
+        &__absent{
+            font-family: var(--wa-commonlyused-font);
+            @apply w-full h-full relative;
+
+            & .title{
+                font-family: 'IBM Plex Medium';
+                font-size: 1.295rem;
+                @apply border-b-wa-border-box-color mb-5  border-b-2 px-4 py-5 font-normal;
+            }
+
+            & .chat_float{
+                @apply absolute top-20 -right-10;
+            }
+        }
     }
 }
 
 .sideBar_container{
-    @apply  w-2/12 h-full border-2 border-red-400;
+    @apply  w-2/12 h-full ;
 }
 
 
@@ -142,7 +329,7 @@
 
 .sideBar_contents{
     background-color: rgba(245, 245, 255, 0.4);
-    @apply  w-full h-full px-5;
+    @apply  w-full h-full px-6;
 
     & .image_container{
         @apply  h-1/6 w-full flex justify-center items-center;
@@ -155,7 +342,7 @@
     }
 
     & .other_contents{
-        @apply  h-5/6 w-full pt-5;
+        @apply  h-4/6 w-full pt-5;
 
         & ul{
             background-color: var(--wa-box-background);
@@ -180,6 +367,11 @@
                 width: 95%;
            }
         }
+    }
+
+    & .contact_us{
+        font-family: var(--wa-commonlyused-font);
+        @apply w-full h-auto bg-white border border-wa-border-box-color rounded-[7px] py-4 flex justify-start px-3 gap-3;
     }
 }
 // ends here

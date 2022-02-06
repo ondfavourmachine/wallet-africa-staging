@@ -4,7 +4,8 @@
     </div> 
     <div class="other_contents">
         <ul>
-            <li class="active"> <span class=""><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
+            <li [routerLink] = "['overview']"  [routerLinkActive]="['active']" > <span class=""><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
+            <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']"><span><img src="../../../assets/images/Wallet.svg" alt=""></span> Wallets</li>
             <li (click)="openAndClose($event)" class="payments"> 
                 <div class="flex w-full items-center justify-between">
                     <span class="flex"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> Payments</span>  

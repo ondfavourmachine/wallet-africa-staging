@@ -413,7 +413,7 @@
 
         & li{
             font-family: var(--wa-commonlyused-font);
-            @apply px-2 py-2 font-semibold w-full flex items-center my-3 ;
+            @apply cursor-pointer px-2 py-2 font-semibold w-full flex items-center my-3 transition-all hover:bg-white hover:rounded-lg hover:border-2 hover:border-white hover:text-wa-generalGreen;
 
             & span{
                 @apply mr-3;
@@ -451,7 +451,7 @@
         }
 
         & .sublist li{
-           @apply transition-all hover:bg-white hover:rounded-lg hover:border-2 hover:border-white hover:text-wa-generalGreen
+           @apply transition-all hover:rounded-sm hover:translate-x-2 hover:text-wa-purple-text-color
         }
     }
 
@@ -461,3 +461,59 @@
     }
 }
 // ends here
+
+
+//wallets styles
+
+.wallets{
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @apply overflow-y-auto;
+    font-family: var(--wa-commonlyused-font);
+    & .tab_container{
+         @apply h-[80vh] w-full;
+        & #tabs{
+            @apply mb-9 border-b border-b-[#ECECFF];
+        }
+        & #tabs li a:not(.selected){
+            font-family: var(--wa-commonlyused-font);
+            @apply text-lg text-wa-muted-text opacity-50;
+        }
+        & #tabs li a.selected{
+         font-family: var(--wa-commonlyused-font);
+         @apply text-lg text-wa-purple-text-color;
+     }
+
+     & #tab-contents{
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        box-shadow: var(--wa-box-shadow);
+        // @apply;
+        & .layer{
+         font-family: var(--wa-commonlyused-font);
+         @apply w-[40%] flex justify-between mb-8;
+
+         & h5{
+             @apply font-semibold;
+         }
+
+         & p{
+             @apply font-normal text-[1rem];
+         }  
+
+         & button{ 
+             @apply transition-all capitalize border border-wa-purple-text-color py-2 rounded-sm hover:bg-wa-purple-text-color hover:text-white;
+         }
+        }
+     }
+    }
+
+    & input{
+        background-color: var(--wa-box-background);
+        @apply border border-wa-border-box-color
+    }
+}

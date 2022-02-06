@@ -4,13 +4,15 @@ import { DashboardComponent } from '../../components/dashboard/dashboard.compone
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { OverviewComponent } from '../../components/overview/overview.component';
+import { WalletsComponent } from 'src/app/components/wallets/wallets.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'overview', pathMatch: 'full'},
   { path: '', component: DashboardComponent,
     children: [
       { path: '', redirectTo: 'overview', pathMatch: 'full'},
-      { path: 'overview', component: OverviewComponent,  }
+      { path: 'overview', component: OverviewComponent,  },
+      { path: 'wallets', component: WalletsComponent}
      ]
   },
 ];
@@ -18,7 +20,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     DashboardComponent,
-    OverviewComponent
+    OverviewComponent,
+    WalletsComponent
   ],
   imports: [
     CommonModule,

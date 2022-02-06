@@ -88,10 +88,10 @@
 
         & .header_contents{
             font-family: var(--wa-commonlyused-font);
-            @apply h-24 w-full border-b-2 border-b-[#ececff] flex items-end pb-4;
+            @apply h-24 relative z-20 w-full border-b-2 border-b-[#ececff] flex items-end pb-4;
 
             & .notifications_and_dropDown{
-                @apply flex-auto flex justify-end items-center mx-1;
+                @apply flex-auto flex justify-end items-center mx-1 cursor-pointer;
             }
 
             & .salutation{
@@ -106,12 +106,77 @@
 
             & .name_details{
                 font-size: .975rem;
-                @apply flex justify-between items-center font-semibold;
+                transform-style: preserve-3d;
+                transition: all 150ms ease;
+                @apply flex justify-between items-center cursor-pointer font-semibold relative hover:py-1 hover:px-1 hover:rounded-sm;
+
+                &:hover{
+                    border: 1px solid rgba(83, 45, 148, 0.4);
+                    box-shadow: rgba(83, 45, 148, 0.4) 0px 1px 4px;
+                }
+
+                & .actual_dropdown{
+                    box-shadow: var(--wa-box-shadow);
+                    transform-origin: top;  
+                    transform: rotateX(.25turn);
+                    opacity: 0;
+                    transition: transform 300ms ease, opacity 350ms ease;
+                    z-index: 100;
+                   
+                    @apply shadow-2xl w-[22rem] h-[32rem] rounded-lg  px-6 py-5 border border-wa-border-box-color bg-white absolute cursor-pointer right-0 top-8;
+
+                    & .profile_info, .goPremium, .bankAndCards, .referAndEarn, .logout{
+                        font-family: 'IBM Plex Light';
+                        @apply flex gap-3 w-full h-1/4 border border-[#5248C8] bg-wa-purple-text-color rounded-lg px-4 py-3;
+
+                        & img{
+                            @apply pt-1;
+                        }
+
+                        & .name{
+                            font-size: 1.205rem;
+                            @apply text-white;
+                        }
+
+                        & .username{
+                            font-size: 0.855rem;
+                            @apply text-white mb-2;
+                        }
+
+                        & .view_profile_button{
+                            @apply text-wa-generalGreen w-full flex items-center;
+
+                            & svg{
+                                @apply ml-3 -rotate-90;
+                            }
+                        }
+                    }
+
+                    & .goPremium, .bankAndCards, .referAndEarn, .logout{
+                        @apply bg-white py-2 border-none h-[4.5rem] mt-2;
+                        
+
+                        & .name, .username{
+                            @apply text-inherit;
+                        }
+
+                        & .name small{
+                            font-size: .675rem;
+                        }
+                    }
+
+                    &.show{
+                        transform: rotateX(0deg);
+                        opacity: 1;
+                    }
+                }
+
             }
         
         }
     }
 }
+
 
 // general styles here
 
@@ -121,7 +186,7 @@
     &::-webkit-scrollbar{
         display: none;
     }
-    @apply w-full h-screen overflow-auto px-3 ;
+    @apply w-full h-screen overflow-auto px-3;
     
     & .verification_incomplete{
         font-family: var(--wa-commonlyused-font);
@@ -318,18 +383,15 @@
     }
 }
 
+// sidebar styles here
 .sideBar_container{
     @apply  w-2/12 h-full ;
 }
 
 
-
-// sidebar styles here
-
-
 .sideBar_contents{
     background-color: rgba(245, 245, 255, 0.4);
-    @apply  w-full h-full px-6;
+    @apply w-full h-full px-6;
 
     & .image_container{
         @apply  h-1/6 w-full flex justify-center items-center;
@@ -342,7 +404,7 @@
     }
 
     & .other_contents{
-        @apply  h-4/6 w-full pt-5;
+        @apply transition-all h-4/6 w-full pt-5;
 
         & ul{
             background-color: var(--wa-box-background);
@@ -351,7 +413,7 @@
 
         & li{
             font-family: var(--wa-commonlyused-font);
-            @apply px-2 py-2 font-semibold w-full flex items-center my-3;
+            @apply px-2 py-2 font-semibold w-full flex items-center my-3 ;
 
             & span{
                 @apply mr-3;
@@ -366,6 +428,30 @@
            & .chevron_down img{
                 width: 95%;
            }
+        }
+
+        & .payments, .transactions{
+            @apply transition-all flex flex-col cursor-pointer h-10 overflow-hidden;
+            
+            & ul{
+                font-family: var(--wa-commonlyused-font);
+                @apply pl-8;
+                & li{
+                    font-size: .775rem;
+                }
+            }
+
+          &.open{
+            @apply h-auto;
+          }
+        }
+
+        &.elongate{
+            @apply h-auto;
+        }
+
+        & .sublist li{
+           @apply transition-all hover:bg-white hover:rounded-lg hover:border-2 hover:border-white hover:text-wa-generalGreen
         }
     }
 

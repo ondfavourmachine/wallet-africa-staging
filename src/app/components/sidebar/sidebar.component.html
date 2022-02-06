@@ -5,10 +5,39 @@
     <div class="other_contents">
         <ul>
             <li class="active"> <span class=""><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
-            <li> <span><img src="../../../assets/images/Money.svg" alt=""></span> Payments</li>
-            <li> <span><img src="../../../assets/images/Clipboard-list.svg" alt=""></span>Transactions</li>
+            <li (click)="openAndClose($event)" class="payments"> 
+                <div class="flex w-full items-center justify-between">
+                    <span class="flex"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> Payments</span>  
+                    <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
+                </div>   
+
+                <ul class="sublist">
+                    <li class="capitalize">transfer to business</li>
+                    <li class="capitalize">Wallet (Single)</li>
+                    <li class="capitalize">bank account (single)</li>
+                    <li class="capitalize">mobile money (single)</li>
+                    <li class="capitalize">wallet (bulk)</li>
+                    <li class="capitalize">bank account (bulk)</li>
+                    <li class="capitalize">mobile money (bulk)</li>
+                </ul>
+            </li>
+            <li (click)="openAndClose($event)" class="transactions">
+                <div class="flex w-full items-center justify-between">
+                    <span class="flex"><img class="mr-3" src="../../../assets/images/Clipboard-list.svg" alt=""> Transactions</span>  
+                    <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
+                </div> 
+                <ul class="sublist">
+                    <li class="capitalize">history</li>
+                    <li class="capitalize">reoccuring</li>
+                </ul>
+            </li>
             <li><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Cards</li>
-            <li> <span class="flex-auto flex items-center"><span><img src="../../../assets/images/Box_3.svg" alt=""></span> More</span>  <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span></li>
+            <li> 
+                <span class="flex-auto flex items-center">
+                    <span><img src="../../../assets/images/Box_3.svg" alt=""></span> More
+                </span>  
+                <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
+            </li>
         </ul>
     </div>
 

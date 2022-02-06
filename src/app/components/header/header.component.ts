@@ -12,4 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  toggle(event: Event){
+    const actualDropDown = (event.target as HTMLElement).querySelector('.actual_dropdown') as HTMLElement;
+    actualDropDown.classList.toggle('show');
+  }
 }

@@ -16,6 +16,22 @@
     --wa-commonlyused-font: 'IBM Plex Light';
 }
 
+
+@font-face {
+    font-family: 'IBM Plex Sans SemiBold';
+    src: url('./assets/fonts/IBM_SANS/IBMPlexSans-SemiBold.ttf');
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'IBM Plex Sans Regular';
+    src: url('./assets/fonts/IBM_SANS/IBMPlexSans-Regular.ttf');
+    font-style: normal;
+}
+
+
+
 @font-face {
     font-family: 'IBM Plex Light';
     src: url('./assets/fonts/IBMPlexSans-Light.ttf');
@@ -77,6 +93,84 @@
     src: url('./assets/fonts/IBMPlexSans-BoldItalic.ttf');
     font-weight: bold;
     font-style: italic;
+}
+
+
+.reusable_button{
+    font-size: 1.15rem;
+    font-family: 'IBM Plex Medium';
+    @apply px-6 bg-wa-generalGreen py-2 ml-2 text-wa-active-text rounded-sm text-sm;
+}
+
+
+.sign_in{
+    @apply w-screen h-screen max-w-full max-h-full bg-wa-bg-loginAndSignup;
+
+   & .header{
+       @apply h-[12vh] py-7 w-full flex justify-between items-center px-9;
+
+      & .other_stuff{
+          & span{
+              font-size: 1.1rem;
+              font-family: 'IBM Plex Medium';
+              @apply text-wa-active-text font-medium;
+          }
+  
+         
+        }
+   }
+
+    & .body{
+        @apply h-[88vh] flex justify-center items-start pt-12 w-full;
+          & .title{ 
+              @apply  w-full flex flex-col justify-center items-center mb-5 leading-8;
+
+              & p{
+                  font-family: 'IBM Plex Light';
+                  @apply capitalize font-medium text-2xl text-wa-active-text py-2 mb-3;
+
+                  &.signup{
+                      font-family: 'IBM Plex Medium'; 
+                  }
+
+                  &.login_title{
+                      font-family: 'IBM Plex Sans SemiBold';
+                      @apply text-[1.3rem] 
+                  }
+              }
+
+              & span{
+                  font-family: 'IBM Plex Light';
+                  @apply font-medium text-sm text-wa-active-text;
+
+                  &.login_desc{
+                      font-family: 'IBM Plex Sans Regular';
+                      @apply text-[0.975rem];
+                  }
+              }
+          }
+
+         & .forms_content{
+             display: grid;
+             grid-template-rows: repeat(3, minmax(25px, 50px));
+             @apply grid-cols-2 place-items-center gap-2 py-3 px-2;
+
+             &.signup{
+                 @apply grid-cols-1 grid-rows-2;
+             }
+
+             & .form-group .form-control{
+                 font-family: 'IBM Plex Medium';
+                 font-size: 0.675rem;
+                 color: #7B7B9F;
+                 @apply  w-full bg-wa-input-bg h-10 rounded-[5px] border border-[#DFE4F4];
+             }
+
+             & .form-group:nth-child(2){
+                 @apply self-start;
+             }
+         }
+    }
 }
 
 

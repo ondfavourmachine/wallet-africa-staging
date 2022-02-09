@@ -12,6 +12,7 @@ module.exports = {
     theme: {
       extend: {
         colors: {
+          "wa-bg-loginAndSignup": "#F5F5FA",
           "wa-bg-general": "#FFFFFF",
           "wa-input-bg": "#F2F4FB",
           "wa-active-text": "#240C40",

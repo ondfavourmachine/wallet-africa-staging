@@ -5,17 +5,44 @@
         </div>
 
         <div class="other_stuff mx-4">
-            <span class="">Have an account:</span> <button class="reusable_button">Signin</button>
+            <span class="">Have an account:</span> <button (click)="gotoLogin()" class="reusable_button ">Signin</button>
         </div>
     </div>
-    <div class=" body">
-        <div class="w-2/5 h-4/6 ">
+    <div class="body welcome_body flex-col">
+        <div class="w-2/5 h-auto self-center">
             <div class=" title">
                 <p class="welcome_title">Let's Get Started</p>
                 <span class="welcome_title_supportingText"> Please choose your preferred account type </span>
             </div>
+        </div>
 
-           
+        <div class="boxes">
+            <div class="w-4/6 h-full  py-2">
+                <div class="boxes_for_personalOrBusiness ">
+                    <div class="box_for_personal_wallet">
+                            <div class="image_background">
+                                <img class="-left-[2px] top-2" src="../../../assets/images/wallets_for_personal_use.svg" alt="">
+                            </div>
+
+                            <p class="bold_title">Wallet for personal use</p>
+
+                            <p class="description">
+                                Send money to anywhere in Nigeria, make payments everywhere on the internet.
+                            </p>
+                    </div>
+                    <div class="box_for_business_wallet">
+                        <div class="image_background">
+                            <img src="../../../assets/images/wallets_for_business.svg" alt="">
+                        </div>
+
+                        <p class="bold_title">Wallet for your business</p>
+
+                        <p class="description">
+                            Experience a simpler way to bank for businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

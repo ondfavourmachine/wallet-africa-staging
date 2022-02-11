@@ -106,7 +106,7 @@
 .reusable_button{
     font-size: 1.15rem;
     font-family: 'IBM Plex Medium';
-    @apply px-6 bg-wa-generalGreen py-2 ml-2 text-wa-active-text rounded-sm text-sm;
+    @apply px-6 bg-wa-generalGreen cursor-pointer py-2 ml-2 text-wa-active-text rounded-sm text-sm;
 }
 
 
@@ -197,6 +197,43 @@
                 @apply font-semibold
             }
          }
+    }
+
+
+    & .welcome_body{
+        @apply justify-start;
+
+        & .boxes{
+            @apply h-[50vh] w-full flex justify-center items-center;
+        }
+
+        & .boxes_for_personalOrBusiness{
+            @apply flex justify-center gap-12 px-4 py-2;
+
+            & .box_for_personal_wallet, .box_for_business_wallet{
+                font-family: 'IBM Plex Sans Regular';
+                @apply w-1/2 h-[47vh] py-5 px-9 rounded-[7px] border border-white bg-white flex flex-col justify-center items-center;
+
+                & .image_background{
+                    @apply h-32 w-32 rounded-full mb-5 relative border border-[#f7f9fd] bg-[#F7F9FD];
+
+                    & img{
+                        @apply absolute w-32 h-32 max-w-[8.5rem];
+                    }
+
+                }
+
+                & .bold_title{
+                    font-size: 1.175rem;
+                    @apply font-semibold mb-3;
+                }
+
+                & .description{
+                    font-size: 0.975rem;
+                    @apply w-4/5 break-words text-center font-normal;
+                }
+            }
+        }
     }
 }
 
@@ -587,7 +624,6 @@
 //wallets styles
 
 .wallets{
-
     scrollbar-width: none;
     &::-webkit-scrollbar{
         display: none;
@@ -638,5 +674,8 @@
         @apply border border-wa-border-box-color
     }
 }
+
+// welcome styles
+
 
 

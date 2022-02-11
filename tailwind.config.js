@@ -19,6 +19,7 @@ module.exports = {
           "wa-generalGreen": "#00C9B6",
           "wa-sideBar-bg": "#e5e5e5",
           "wa-muted-text": "#716E89;",
+          "wa-placeholder-color": '#7b7b9f',
           "wa-purple-text-color": "#532d94",
           "wa-paragraph-text-color": "#40344e",
           "wa-border-box-color": "#DFE4F4",

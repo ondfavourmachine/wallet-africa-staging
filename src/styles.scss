@@ -107,6 +107,14 @@
     font-size: 1.15rem;
     font-family: 'IBM Plex Medium';
     @apply px-6 bg-wa-generalGreen cursor-pointer py-2 ml-2 text-wa-active-text rounded-sm text-sm;
+
+    &.outlined{
+        @apply bg-white text-wa-purple-text-color border border-wa-purple-text-color rounded-[4px];
+    }
+
+    &.extra_padding{
+        @apply px-12 py-[10px];
+    }
 }
 
 
@@ -622,8 +630,7 @@
 
 
 //wallets styles
-
-.wallets{
+.wallets, .transfer_to_business{
     scrollbar-width: none;
     &::-webkit-scrollbar{
         display: none;
@@ -670,10 +677,25 @@
     }
 
     & input{
-        background-color: var(--wa-box-background);
-        @apply border border-wa-border-box-color
+        // background-color: var(--wa-box-background);
+        @apply border border-wa-border-box-color bg-[#F2F4FB]
     }
 }
+
+// transfer to business styles
+    .transfer_to_business{
+        font-family: 'IBM Plex Sans Regular';
+
+        & .transfer_form_container{
+            box-shadow: 0px 4px 10px rgba(154, 171, 237, 0.06);
+        }
+
+        & input::placeholder{
+            @apply text-wa-placeholder-color;
+        }
+    }
+    
+// ends here
 
 // welcome styles
 

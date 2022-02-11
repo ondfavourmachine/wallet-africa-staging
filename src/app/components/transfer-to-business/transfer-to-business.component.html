@@ -1,1 +1,93 @@
-<p>transfer-to-business works!</p>
+
+
+<section class="transfer_to_business w-full">
+    <div id="first" class="p-4 w-1/2 h-full flex ">
+        <div class="transfer_form_container w-full pt-3 px-3 border border-wa-border-box-color rounded-[8px] mt-5">
+               <div *ngIf="stage == 1" class="md:grid md:grid-cols-1 md:gap-2">
+                 <div class="md:col-span-1">
+                   <div class="px-2 sm:px-0">
+                     <h3 class="text-lg font-semibold px-4 pt-4 leading-6 text-wa-paragraph-text-color "> Transfer to business </h3>
+                   </div>
+                 </div>
+                 <div class=" md:mt-0 md:col-span-1">
+                   <form >
+                     <div class="">
+                       <div class="px-4 py-5 bg-white sm:pt-2 sm:py-5">
+                         <div class="grid grid-cols-6 gap-7">
+                           <div class="col-span-6 ">
+                             <input type="email" placeholder="Enter wallet business email" name="business_email" id="business_email" autocomplete="given-name" 
+                             class="h-14 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-[3px]">
+
+                             <p class="w-full mt-3"><a href="javascript:void(0)" class="cursor-pointer underline text-wa-purple-text-color">Select business directory</a></p>
+                           </div>
+             
+                           <div class="col-span-6 ">
+                             <input type="text" placeholder="Enter amount" name="AccountNumber" id="amount" autocomplete="family-name" 
+                             class="mt-1 h-14 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-[3px]">
+                           </div>
+                           
+                           <div class="col-span-6">
+                               <input type="text" placeholder="Reference(optional)" name="SelectBank" id="reference" autocomplete="family-name" 
+                               class="mt-1 h-14 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-[3px]">
+                             </div>
+
+                             <div class="col-span-6 ">
+                               <input type="text" placeholder="Add a note (optional)" name="Amount" id="note" autocomplete="family-name" 
+                               class="mt-1 h-14 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-[3px]">
+                             </div>
+                         </div>
+
+                         <div class="w-full py-3 mt-2">
+                            <button type="button" 
+                             (click)="stage = 2"
+                             class="w-full inline-flex justify-center py-2 px-36 border border-transparent shadow-sm text-lg font-semibold rounded-md text-wa-purple-text-color bg-wa-generalGreen hover:bg-wa-generalGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wa-purple-text-color">
+                             Send
+                          </button>
+                            
+                          </div>
+                       </div>
+                      
+                     </div>
+                   </form>
+                 </div>
+               </div>
+               <!--  stage 2 -->
+               <div *ngIf="stage == 2" class="md:grid md:grid-cols-1 md:gap-2">
+                <div class="md:col-span-1">
+                  <div class="px-2 sm:px-0">
+                    <h3 class="text-lg font-semibold px-4 pt-4 leading-6 text-wa-paragraph-text-color "> Confirm Business Details </h3>
+                  </div>
+                </div>
+                <div class="px-4 md:mt-0 md:col-span-1">
+                    <div class="my-6 flex gap-2 flex-col">
+                        <span class="mt-4 text-wa-muted-text">Business Name</span>
+                        <p class="flex font-bold items-center"><img class="mr-4" src="../../../assets/images/profile_pic.png" alt=""> Blastway</p>
+                    </div>
+
+                    <div class="flex w-full gap-5 mt-5 mb-9">
+                        <p class="w-1/2 flex flex-col gap-2">
+                            <span class="text-wa-muted-text">Business email</span>
+                            <span class="font-bold text-wa-active-text">Ukenu@gmail.com</span>
+                        </p>
+                        
+                        <p class="w-1/2 flex flex-col gap-2">
+                            <span class="text-wa-muted-text">Amount</span>
+                            <span class="font-bold text-wa-active-text">₦1,500.00</span>
+                        </p>
+                    </div>
+
+                    <div class="w-full flex gap-5 mt-6 mb-7">
+                        <button style="margin-left: 0px;" class=" reusable_button outlined extra_padding">
+                            Back
+                        </button>
+
+                        <button (click)="authorizeTransaction()" class=" reusable_button extra_padding">
+                            Proceed
+                        </button>
+                    </div>
+                </div>
+              </div>
+             
+        </div>
+     </div>  
+</section>

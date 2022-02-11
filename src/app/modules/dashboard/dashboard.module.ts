@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
 import { OverviewComponent } from '../../components/overview/overview.component';
 import { WalletsComponent } from 'src/app/components/wallets/wallets.component';
+import { TransferToBusinessComponent } from 'src/app/components/transfer-to-business/transfer-to-business.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'overview', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'overview', pathMatch: 'full'},
       { path: 'overview', component: OverviewComponent,  },
-      { path: 'wallets', component: WalletsComponent}
+      { path: 'wallets', component: WalletsComponent},
+      { path: 'transfer-to-business', component: TransferToBusinessComponent}
      ]
   },
 ];
@@ -21,7 +23,8 @@ const routes: Routes = [
   declarations: [
     DashboardComponent,
     OverviewComponent,
-    WalletsComponent
+    WalletsComponent,
+    TransferToBusinessComponent
   ],
   imports: [
     CommonModule,

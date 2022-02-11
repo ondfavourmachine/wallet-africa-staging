@@ -9,12 +9,14 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    
   ],
   imports: [
     BrowserModule,

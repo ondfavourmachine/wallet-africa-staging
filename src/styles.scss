@@ -733,3 +733,56 @@
 
 // ends here
 
+
+// transfer Successful
+
+.img_container{
+    font-family: 'IBM Plex Sans Regular';
+    height: 30%;
+    @apply w-full flex flex-col justify-center items-center;
+    & img{
+        max-width: 100%;
+    }
+
+    & span{
+        font-size: 1.175rem;
+        @apply text-wa-generalGreen font-medium;
+    }   
+}
+
+.remaining_contents{
+    font-family: 'IBM Plex Sans Regular';
+    @apply w-full;    
+    & .essential_info{
+        @apply w-5/6 grid grid-cols-2 grid-rows-2 gap-y-0 mx-auto px-2 my-5;
+
+        & .essential_info_child{
+            @apply flex flex-col justify-center;
+
+            & span:first-child {
+                font-size: .775rem;
+                @apply font-medium text-wa-muted-text mb-2; 
+            }
+
+            & span:last-child {
+                font-size: 1rem;
+                @apply font-semibold text-wa-active-text; 
+            }
+        }
+
+        & .essential_info_child:nth-child(3), .essential_info_child:last-child{
+            @apply my-2;
+        }
+
+        & .essential_info_child:nth-child(2), .essential_info_child:last-child{
+            @apply my-4 items-end;
+        }
+
+    }
+
+    & .button_container{
+        @apply w-full flex justify-center gap-5 items-center my-7;
+    }
+}
+
+

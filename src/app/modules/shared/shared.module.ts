@@ -6,6 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthorizeTransactionComponent } from '../../reusables/authorize-transaction/authorize-transaction.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TransferSuccessfullComponent } from '../../components/transfer-successfull/transfer-successfull.component';
 
 
 
@@ -13,7 +14,8 @@ import { MatDialogModule } from '@angular/material/dialog';
   declarations: [
     SidebarComponent,
     HeaderComponent,
-    AuthorizeTransactionComponent
+    AuthorizeTransactionComponent,
+    TransferSuccessfullComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   exports: [
     AuthorizeTransactionComponent,
+    TransferSuccessfullComponent,
     FormsModule,
     ReactiveFormsModule,
     SidebarComponent,

@@ -507,7 +507,7 @@
         }
     }
 
-    & .actions_section{
+    & .actions_section, .cards_section{
         font-family: var(--wa-commonlyused-font);
         @apply mt-8 mb-12 w-full;
 
@@ -522,7 +522,7 @@
 
             & .grid_child{
                 background-color: rgba(245, 245, 255, 0.4);
-                @apply h-40 w-full border-2 border-wa-border-box-color rounded-[7px] flex flex-col justify-center items-center;
+                @apply h-40 w-full border-2 cursor-pointer border-wa-border-box-color rounded-[7px] flex flex-col justify-center items-center;
 
                 & p{
                     @apply font-semibold mt-5 text-wa-purple-text-color;
@@ -536,7 +536,7 @@
                 }
                 
             }
-        }
+         }
     }
 
 
@@ -561,6 +561,95 @@
                 @apply absolute top-20 -right-10;
             }
         }
+    }
+
+     //  cards section
+
+   & .cards_section{
+        &__gridparent{
+            @apply grid grid-cols-[repeat(4,_minmax(50px,_150px))] grid-rows-[repeat(2,_minmax(50px,_100px))] gap-5;
+
+            & .grid_child{
+                @apply h-48 col-span-2 cursor-pointer row-span-2;
+
+                & p{
+                    @apply my-1;
+                }
+
+                &:last-child{
+                    background-color: transparent;
+                    @apply border-0 border-none py-2;
+
+                    & .created_card{
+                        background: linear-gradient(180deg, #5D2C90 0%, #9F4073 100%);
+                        @apply h-full w-full rounded-[7px] relative;
+
+                        &__contents{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                            right: 0;
+                            bottom: 0;
+                            background-color: transparent;
+                            font-family: 'IBM Plex Sans Regular';
+                            @apply flex;
+
+                            & .numbers_container{
+                                @apply  flex justify-between w-full;
+
+                                & .numbers{
+                                    text-shadow: 0px 1px 1px #000000;
+                                    @apply font-medium text-2xl text-white;
+                                }
+                            }
+
+                            & .card_holder{
+                                @apply w-full pt-5 flex justify-between pl-1;
+
+                                &__name > * , &__expiration > *{
+                                    font-family: 'IBM Plex Sans Regular';
+                                   
+                                    @apply block;
+                                }
+
+                                &__name span:nth-child(1), &__expiration span:nth-child(1){
+                                    font-size: .625rem;
+                                    letter-spacing: .15em;
+                                    @apply uppercase text-white opacity-80;
+                                }
+
+                                &__name span:nth-child(2), &__expiration span:nth-child(2){
+                                    font-size: 1.175rem;
+                                    @apply capitalize text-white font-medium;
+                                }
+                            }
+                        }
+                    }
+
+                    & .created_card::after{
+                        content: '';
+                        position: absolute;
+                        top: 50px;
+                        left: -10px;
+                        right: 0;
+                        bottom: 0;
+                        background: url(./assets/images/Vector.svg) no-repeat;
+                    }
+
+                    & .created_card.naira{
+                        background:  linear-gradient(128.39deg, rgba(0, 0, 0, 0.6) -23.7%, #000000 16.11%);
+
+                        &::after{
+                            top: 10px;
+                            left: -13px;
+                            background: url(./assets/images/another_w_vector.svg) no-repeat;   
+                        }
+                    }
+                }
+            }
+        }
+    
     }
 }
 
@@ -784,5 +873,47 @@
         @apply w-full flex justify-center gap-5 items-center my-7;
     }
 }
+
+
+// ends here
+
+// create a card styles
+
+.create_card{
+    font-family: 'IBM Plex Sans Regular';
+    @apply w-full h-full max-h-max;
+
+    & h5{
+        font-size: 0.925rem;
+        @apply mb-2 text-wa-active-text font-semibold items-center w-full flex justify-between opacity-100;
+
+        & span{
+            @apply self-start;
+        }
+    }
+
+    & label{
+        font-size: .725rem;
+        @apply block mb-2 opacity-80 font-medium text-wa-active-text;
+    }
+
+    & input, select{
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        @apply  text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+    }
+
+    & button{
+        @apply focus:ring-4;
+    }
+
+    & p{
+        font-size: .805rem;
+        @apply opacity-100;
+    }
+}
+
+// ends here
+
+
 
 

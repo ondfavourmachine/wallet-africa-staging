@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthorizeTransactionComponent } from '../../reusables/authorize-transaction/authorize-transaction.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TransferSuccessfullComponent } from '../../components/transfer-successfull/transfer-successfull.component';
+import { CreateACardComponent } from '../../components/create-a-card/create-a-card.component';
 
 
 
@@ -15,7 +16,8 @@ import { TransferSuccessfullComponent } from '../../components/transfer-successf
     SidebarComponent,
     HeaderComponent,
     AuthorizeTransactionComponent,
-    TransferSuccessfullComponent
+    TransferSuccessfullComponent,
+    CreateACardComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { TransferSuccessfullComponent } from '../../components/transfer-successf
   exports: [
     AuthorizeTransactionComponent,
     TransferSuccessfullComponent,
+    CreateACardComponent,
     FormsModule,
     ReactiveFormsModule,
     SidebarComponent,

@@ -1,0 +1,174 @@
+<!--  -->
+
+
+<section class="wallets">
+    <div class="w-full h-full mt-4 ">
+        <div class="tab_container">
+            <div class="w-full rounded">
+                <!-- Tabs -->
+                <ul id="tabs" class="inline-flex w-full px-1 pt-2 ">
+                  <li class="px-4 py-2 -mb-px font-semibold  border-b-2 border-wa-purple-text-color rounded-t">
+                      <a id="default-tab" class="selected" href="#first">Physical</a>
+                    </li>
+                  <li class="px-4 py-2 font-semibold rounded-t "><a href="#second">Virtual</a></li>
+                </ul>
+
+                <!-- Tab Contents -->
+                <div id="tab-contents" class="h-auto">
+                  <div id="first" class="p-4 w-full h-full flex">
+                    <div class="w-5/6">
+                        <div class="cards_section ">
+                            <div class="cards_section__title">
+                                Dollar Cards
+                            </div>
+                            <div class="cards_section__gridparent">
+                                <div (click)="createACard()" class="grid_child">
+                                    <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
+                                    <p>Create card</p>
+                                </div>
+                                <div class="grid_child created_card_container">
+                                   <div class="created_card dollar">
+                                       <div class="created_card__contents">
+                                           <div class="h-4/6 self-end w-full px-6">
+                                            <p class="numbers_container">
+                                                <span class="numbers">4319</span>
+                                                <span class="numbers">5312</span>
+                                                <span class="numbers">0215</span>
+                                                <span class="numbers">1289</span>
+                                            </p>
+                                            <div class="card_holder">
+                                                <div class="card_holder__name">
+                                                    <span>card holder</span>
+                                                    <span>Sandra Smith</span>
+                                                </div>
+                                                <div class="card_holder__expiration">
+                                                    <span>expires</span>
+                                                    <span>04/20</span>
+                                                </div>
+                                            </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cards_section mt-4">
+                            <div class="cards_section__title">
+                                Naira Cards
+                            </div>
+                            <div class="cards_section__gridparent">
+                                <div (click)="createACard()" class="grid_child">
+                                    <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
+                                    <p>Create Card</p>
+                                </div>
+                                <div class="grid_child created_card_container">
+                                    <div class="created_card naira">
+                                        <div class="created_card__contents">
+                                            <div class="h-4/6 self-end w-full px-6">
+                                             <p class="numbers_container">
+                                                 <span class="numbers">****</span>
+                                                 <span class="numbers">****</span>
+                                                 <span class="numbers">****</span>
+                                                 <span class="numbers">1289</span>
+                                             </p>
+                                             <div class="card_holder">
+                                                 <div class="card_holder__name">
+                                                     <span>card holder</span>
+                                                     <span>Sandra Smith</span>
+                                                 </div>
+                                                 <div class="card_holder__expiration">
+                                                     <span>expires</span>
+                                                     <span>04/20</span>
+                                                 </div>
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div>
+                  <div id="second" class="hidden p-4  w-full py-8 h-full">
+                    <div class="w-5/6">
+                        <div class="cards_section ">
+                            <div class="cards_section__title">
+                                Dollar Cards
+                            </div>
+                            <div class="cards_section__gridparent">
+                                <div (click)="createACard()" class="grid_child">
+                                    <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
+                                    <p>Create card</p>
+                                </div>
+                                <div class="grid_child created_card_container">
+                                   <div class="created_card dollar">
+                                       <div class="created_card__contents">
+                                           <div class="h-4/6 self-end w-full px-6">
+                                            <p class="numbers_container">
+                                                <span class="numbers">4319</span>
+                                                <span class="numbers">5312</span>
+                                                <span class="numbers">0215</span>
+                                                <span class="numbers">1289</span>
+                                            </p>
+                                            <div class="card_holder">
+                                                <div class="card_holder__name">
+                                                    <span>card holder</span>
+                                                    <span>Sandra Smith</span>
+                                                </div>
+                                                <div class="card_holder__expiration">
+                                                    <span>expires</span>
+                                                    <span>04/20</span>
+                                                </div>
+                                            </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cards_section mt-4">
+                            <div class="cards_section__title">
+                                Naira Cards
+                            </div>
+                            <div class="cards_section__gridparent">
+                                <div (click)="createACard()" class="grid_child">
+                                    <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
+                                    <p>Create Card</p>
+                                </div>
+                                <div class="grid_child created_card_container">
+                                    <div class="created_card naira">
+                                        <div class="created_card__contents">
+                                            <div class="h-4/6 self-end w-full px-6">
+                                             <p class="numbers_container">
+                                                 <span class="numbers">****</span>
+                                                 <span class="numbers">****</span>
+                                                 <span class="numbers">****</span>
+                                                 <span class="numbers">1289</span>
+                                             </p>
+                                             <div class="card_holder">
+                                                 <div class="card_holder__name">
+                                                     <span>card holder</span>
+                                                     <span>Sandra Smith</span>
+                                                 </div>
+                                                 <div class="card_holder__expiration">
+                                                     <span>expires</span>
+                                                     <span>04/20</span>
+                                                 </div>
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

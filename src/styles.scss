@@ -888,7 +888,15 @@
         @apply mb-2 text-wa-active-text font-semibold items-center w-full flex justify-between opacity-100;
 
         & span{
-            @apply self-start;
+            @apply transition-all self-start flex justify-center items-center cursor-pointer hover:p-1;
+
+            & img{
+                @apply max-w-[80%];
+            }
+
+            &:hover img{
+                @apply max-w-[100%];
+            }
         }
     }
 

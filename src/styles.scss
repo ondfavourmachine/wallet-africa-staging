@@ -16,6 +16,25 @@
     --wa-commonlyused-font: 'IBM Plex Light';
 }
 
+@font-face {
+    font-family: 'Inter ExtraLight';
+    src: url('./assets/fonts/Inter/Inter-ExtraLight.ttf');
+    font-style: 200;
+}
+
+
+@font-face {
+    font-family: 'Inter Light';
+    src: url('./assets/fonts/Inter/Inter-Light.ttf');
+    font-style: 300;
+}
+
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('./assets/fonts/Inter/Inter-Medium.ttf');
+    font-style: 300;
+}
+
 
 @font-face {
     font-family: 'IBM Plex Sans SemiBold';
@@ -151,18 +170,16 @@
    }
 
     & .body{
-        @apply h-[88vh] flex justify-center items-start pt-12 w-full;
+        @apply h-[88vh] flex justify-center items-start pt-8 w-full;
           & .title{ 
               @apply  w-full flex flex-col justify-center items-center mb-5 leading-8;
-
-            
-
               & p{
                   font-family: 'IBM Plex Light';
-                  @apply capitalize font-medium text-2xl text-wa-active-text py-2 mb-3;
+                  @apply font-semibold text-2xl text-wa-active-text py-2 mb-3;
 
                   &.signup{
                       font-family: 'IBM Plex Medium'; 
+                      letter-spacing: .05em;
                   }
 
                   &.login_title{
@@ -196,11 +213,15 @@
          & .forms_content{
              display: grid;
              grid-template-rows: repeat(3, minmax(25px, 50px));
-             @apply grid-cols-2 place-items-center gap-2 py-3 px-2;
+             @apply grid-cols-2 place-items-center gap-y-5 gap-x-4 py-3 px-2;
 
              &.signup{
                  @apply grid-cols-1 grid-rows-2;
              }
+
+             &.OTP{
+                @apply grid-cols-1 grid-rows-1 gap-y-1;
+            }
 
              & .form-group .form-control{
                  font-family: 'IBM Plex Medium';
@@ -213,12 +234,54 @@
                  @apply self-start;
              }
 
+             & .form-group.reset{
+                 @apply self-center;
+             }
+
              & input::placeholder{
                 font-family: 'IBM Plex Sans ExtraLight';
                 font-size: .775rem;
                 letter-spacing: .05ch;
                 @apply font-semibold
             }
+         }
+
+         & h4{
+            font-size: 1em;
+            font-family: 'IBM Plex Sans ExtraLight';  
+            @apply font-semibold -mt-2 mb-2;
+         }
+
+         & .dateOfBirth_details{
+             @apply flex justify-between gap-10 items-center px-2;
+
+             & .form-group{
+                @apply w-1/2;
+             }
+             & select{
+                 border: 2px solid rgba(0, 0, 0, 0.15);
+                 font-family: 'IBM Plex Sans ExtraLight';
+                 font-size: 1.155em;
+                 @apply w-full font-semibold rounded bg-[#ffff];
+             }
+         }
+
+         & .submitBtn{
+             & button.third{
+                font-size: 1.15em;
+                @apply px-9 py-3;
+             }
+
+             & p{
+                 font-family: 'IBM Plex Sans Regular';
+                 font-size: 0.775em;
+                //  @apply font-semibold;
+             }
+
+             & p:nth-child(2){
+                 @apply leading-10;
+             }
+             
          }
     }
 
@@ -261,7 +324,7 @@
 }
 
 
-.main_container{
+.main_container, .personal_documents_upload{
     @apply w-10/12 h-full  px-6 bg-white;
 
     & .header{
@@ -355,6 +418,106 @@
             }
         
         }
+    }
+}
+
+.personal_documents_upload{
+    @apply w-full h-auto bg-wa-bg-loginAndSignup;
+
+    &__contents{
+        font-family: 'IBM Plex Sans ExtraLight';
+        @apply w-full text-center mt-4 px-10 pb-7;
+
+        & .intro{
+            & h2{
+                font-family: 'IBM Plex Medium';
+                font-size: 1.675em;
+                @apply mb-3    
+            }
+
+            & span{
+                font-size: 1.05em;
+                @apply font-semibold text-wa-muted-text;
+            }
+        }
+
+        & .important_details{
+            @apply h-auto bg-white mt-6 px-14 py-8 mb-6 rounded-md;
+
+            & h5{
+                font-family: var(--wa-commonlyused-font);
+                font-size: 1.15em;
+                @apply font-semibold text-left;
+            }
+
+            & .form_fields{
+                @apply w-full text-left mt-8;
+
+                & .form-group{
+                    font-family: var(--wa-commonlyused-font);
+                    @apply w-full;
+
+                    & .form-control{
+                        font-size: 1em;
+                        @apply w-full border-2 bg-wa-input-bg border-[#dfe4f4] text-wa-muted-text rounded-[4px];
+                        
+                    }
+
+                    & select.form-control{
+                        @apply bg-white;
+                    }
+                    
+                }
+
+                & .form-group:nth-child(1){
+                    @apply mb-8;   
+               }
+            }
+
+            & .uploaders{
+                --local-Upload-black: rgba(27, 43, 65, 0.72);
+                @apply text-left mt-8;
+
+                & h3{
+                    font-family: 'Inter Light';
+                    letter-spacing: 0.01em;
+                    color: var(--local-Upload-black);
+                    @apply font-semibold;
+                }
+
+                & .upload_a_document{
+                    border-color: rgba(28, 55, 90, 0.16);
+                    @apply flex justify-start gap-2 mt-1 py-5 px-4 border border-dashed rounded-[4px];
+
+                    & .custom_file_upload{
+                        @apply px-4 py-2 font-semibold text-[#1676f3] bg-wa-input-bg cursor-pointer;
+                    }
+
+                    & span{
+                        font-family: 'Inter ExtraLight';
+                        color: var(--local-Upload-black);
+                        @apply  self-center font-semibold;
+                    }
+                }
+            }
+
+            
+            & .buttons{
+                @apply flex gap-5 mt-10 mb-8;
+
+                & .reusable_button{
+                    font-family: 'IBM Plex Sans Regular';
+                    font-size: 1.05em;
+                    @apply py-4 px-9 font-semibold;
+                }
+
+                & button:not(.reusable_button){
+                    font-family: 'IBM Plex Medium';
+                    @apply transition-all cursor-pointer rounded-[4px] hover:border hover:border-wa-active-text hover:py-3 hover:px-6 hover:opacity-80;
+                }
+            }
+        }
+
     }
 }
 

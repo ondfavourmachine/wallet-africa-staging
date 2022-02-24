@@ -10,6 +10,7 @@ import { WalletsSingleBulkComponent } from '../../components/wallets-single-bulk
 import { AirtimeComponent } from 'src/app/components/airtime/airtime.component';
 import { MobileMoneyComponent } from '../../components/mobile-money/mobile-money.component';
 import { CardsComponent } from '../../components/cards/cards.component';
+// import { PersonalDocumentsComponent } from 'src/app/components/personal-documents/personal-documents.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'overview', pathMatch: 'full'},
@@ -22,7 +23,7 @@ const routes: Routes = [
       { path: 'transfer-to-business', component: TransferToBusinessComponent},
       { path: 'bank-account-single', component: WalletsComponent},
       { path: 'mobile-money', component: MobileMoneyComponent},
-      { path: 'cards', component: CardsComponent}
+      { path: 'cards', component: CardsComponent},
      ]
   },
 ];
@@ -36,7 +37,7 @@ const routes: Routes = [
     WalletsSingleBulkComponent,
     AirtimeComponent,
     MobileMoneyComponent,
-    CardsComponent
+    CardsComponent,
   ],
   imports: [
     CommonModule,

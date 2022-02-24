@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { PersonalDocumentsComponent } from './components/personal-documents/personal-documents.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     LoginComponent,
     SignupComponent,
     WelcomeComponent,
+    PersonalDocumentsComponent,
     
   ],
   imports: [

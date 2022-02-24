@@ -1,4 +1,4 @@
-<div class=" sign_in">
+<div *ngIf="view == 1" class="sign_in">
     <div class="header">
         <div class="wallet_icon flex-auto px-4">
             <img src="../../../assets/images/wallets_africa_1.svg" alt="">
@@ -9,44 +9,148 @@
         </div>
     </div>
     <div class=" body">
-        <div class="w-2/5 h-4/6 ">
+        <div class="w-2/5 h-auto">
             <div class=" title">
-                <p class="">Create a business account</p>
+                <p class="">Create a Personal account</p>
                 <span class=""> We only fill your inbox with happiness </span>
             </div>
 
-            <div class="forms w-11/12 h-[80%] mx-auto px-2 pt-4 border border-white rounded-md bg-white">
-                <div class="forms_content w-full h-auto mb-10">
+            <div class="forms w-11/12 h-[80%] mx-auto px-4 pt-4 border border-white rounded-md bg-white">
+                <div class="forms_content w-full h-auto mb-3">
                     <div class="form-group w-full">
-                        <input placeholder="first name" type="text" class="form-control">
+                        <input placeholder="Full Name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group w-full reset">
+                        <input placeholder="Gender" type="text" class="form-control ">
                     </div>
                     <div class="form-group w-full">
-                        <input placeholder="last name" type="text" class="form-control ">
+                        <input placeholder="Email" type="email" class="form-control">
                     </div>
                     <div class="form-group w-full">
-                        <input placeholder="your best email" type="text" class="form-control">
+                        <input type="text" placeholder="Phone number" class="form-control ">
                     </div>
                     <div class="form-group w-full">
-                        <input type="text" placeholder="phone number" class="form-control ">
+                        <input placeholder="House Number" type="text" class="form-control ">
+                    </div>
+
+                    <div class="form-group w-full">
+                        <input placeholder="Street Name" type="text" class="form-control ">
+                    </div>
+
+                    <div class="form-group w-full">
+                        <input placeholder="City" type="text" class="form-control ">
                     </div>
                     <div class="form-group w-full">
-                        <input placeholder="business name" type="text" class="form-control ">
+                        <input placeholder="LGA" type="text" class="form-control ">
                     </div>
-                    <div class="form-group w-full">
-                        <select type="text" class="form-control">
-                            <option value="" selected>Select Business type</option>
-                        </select>
-                    </div>
+                    
+                    
 
                    
 
                 </div>
 
-                <div class="w-full submitBtn mt-4 flex justify-end items-center pr-3">
-                    <button (click)="gotoSignup()" class="reusable_button ml-0">Get Started</button>
+                <div class="mb-10">
+                    <h4 class="px-2">Your date of birth</h4>
+                    <div class="dateOfBirth_details">
+                        <div class="form-group">
+                            <select name="" id="currency">
+                                <option value="" selected> Day</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="currency">
+                                <option value="" selected> Month</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="currency">
+                                <option value="" selected> Year</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full submitBtn mt-4 mb-8 flex justify-end items-center pr-3">
+                    <button (click)="view = 2" class="reusable_button ml-0">Continue</button>
                 </div> 
             </div>
         </div>
     </div>
 
 </div>
+
+
+<ng-container *ngIf="view == 2">
+    <div class="sign_in">
+        <div class="header">
+            <div class="wallet_icon flex-auto px-4">
+                <img src="../../../assets/images/wallets_africa 1.svg" alt="">
+            </div>
+        </div>
+        <div class=" body">
+            <div class="w-2/5 h-4/6 ">
+                <div class="title">
+                    <p class="signup">Great, let's tighten this up!</p>
+                    <span class=" w-7/12 break-words text-center"> Please create a secure password that is at least 8 characters long </span>
+                </div>
+    
+                <div class="forms w-11/12 h-5/6 mx-auto px-2 pt-4 border border-white rounded-md bg-white">
+                    <div class="forms_content signup w-full h-4/6">
+                        <div class="form-group w-full">
+                            <input placeholder="Enter a password" type="text" class="form-control mb-1">
+                            <span class="mx-2 bg-[#EEFDF4] rounded-sm inline-flex py-1 items-center justify-around px-1"> <img src="../../../assets/images/checkmark.svg" alt=""> <small class="capitalize ml-1  text-wa-generalGreen">uppercase letter</small></span>
+                            <span class="mx-2 bg-[#EEFDF4] rounded-sm inline-flex py-1 items-center justify-around px-1"> <img src="../../../assets/images/checkmark.svg" alt=""> <small class="capitalize ml-1  text-wa-generalGreen">lowercase letter</small></span>
+                            <span class="px-2 inline-flex rounded-sm py-1">  <small class="capitalize px-3  bg-[#f5f5ff] text-wa-muted-text py-1">Number</small></span>
+                            <span class="px-2 inline-flex rounded-sm py-1">  <small class="capitalize px-3  bg-[#f5f5ff] text-wa-muted-text py-1">Special characters</small></span>
+                        </div>
+                        <div class="form-group w-full">
+                            <input placeholder="Confirm password" type="text" class="form-control">
+                        </div>
+                       
+                    </div>
+    
+                    <div class="w-full submitBtn mt-10 flex justify-end items-center pr-3">
+                        <button (click)="view = 3" class="reusable_button ml-0 capitalize">Create my account</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+</ng-container>
+
+
+<ng-container *ngIf="view == 3">
+    <div class="sign_in">
+        <div class="header">
+            <div class="wallet_icon flex-auto px-4">
+                <img src="../../../assets/images/wallets_africa 1.svg" alt="">
+            </div>
+        </div>
+        <div class=" body">
+            <div class="w-2/5 h-4/6 ">
+                <div class="title">
+                    <p class="signup">Great, let's tighten this up!</p>
+                    <span class=" w-5/12 break-words text-center"> Please enter the 4-digit code sent to <strong>2348010902837</strong> </span>
+                </div>
+    
+                <div class="forms w-11/12 h-5/6 mx-auto px-2 pt-4 border border-white rounded-md bg-white">
+                    <div class="forms_content OTP w-full h-auto mb-2">
+                        <div class="form-group w-full">
+                            <input placeholder="OTP" type="text" class="form-control">
+                        </div> 
+                    </div>
+    
+                    <div class="w-full submitBtn flex flex-col justify-center mt-4 items-center pr-3">
+                        <button (click)="view = 3" class="mb-3 reusable_button third ml-0 capitalize">Continue</button>
+                        <p>Did’nt get the SMS <strong class="">Resend</strong> Code</p>
+                        <p>Change phone number</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</ng-container>

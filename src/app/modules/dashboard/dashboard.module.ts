@@ -10,6 +10,7 @@ import { WalletsSingleBulkComponent } from '../../components/wallets-single-bulk
 import { AirtimeComponent } from 'src/app/components/airtime/airtime.component';
 import { MobileMoneyComponent } from '../../components/mobile-money/mobile-money.component';
 import { CardsComponent } from '../../components/cards/cards.component';
+import { CardsOverviewComponent } from 'src/app/components/cards-overview/cards-overview.component';
 // import { PersonalDocumentsComponent } from 'src/app/components/personal-documents/personal-documents.component';
 
 const routes: Routes = [
@@ -17,13 +18,14 @@ const routes: Routes = [
   { path: '', component: DashboardComponent,
     children: [
       { path: '', redirectTo: 'overview', pathMatch: 'full'},
-      { path: 'overview', component: OverviewComponent,  },
+      { path: 'overview', component: OverviewComponent},
       { path: 'wallets', component: WalletsSingleBulkComponent},
       { path: 'buy_airtime', component: AirtimeComponent},
       { path: 'transfer-to-business', component: TransferToBusinessComponent},
       { path: 'bank-account-single', component: WalletsComponent},
       { path: 'mobile-money', component: MobileMoneyComponent},
       { path: 'cards', component: CardsComponent},
+      { path: 'cards/overview', component: CardsOverviewComponent},
      ]
   },
 ];
@@ -38,6 +40,7 @@ const routes: Routes = [
     AirtimeComponent,
     MobileMoneyComponent,
     CardsComponent,
+    CardsOverviewComponent
   ],
   imports: [
     CommonModule,

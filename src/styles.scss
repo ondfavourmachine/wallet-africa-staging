@@ -17,6 +17,12 @@
 }
 
 @font-face {
+    font-family: 'IBM Plex Mono Regular';
+    src: url('./assets/fonts/IBM_Mono/IBMPlexMono-Regular.ttf');
+    font-style: 200;
+}
+
+@font-face {
     font-family: 'Inter ExtraLight';
     src: url('./assets/fonts/Inter/Inter-ExtraLight.ttf');
     font-style: 200;
@@ -723,6 +729,10 @@
             & .chat_float{
                 @apply absolute top-20 -right-10;
             }
+
+            & .info{
+
+            }
         }
     }
 
@@ -1084,6 +1094,136 @@
 }
 
 // ends here
+
+
+// Cards overview component
+.cards_overview{
+    --section-shadow: 0px 4px 10px rgba(154, 171, 237, 0.06);
+    @apply w-full grid grid-cols-12 gap-2 grid-rows-1 h-screen;
+
+
+    & .major_part{
+        @apply col-span-8 h-full px-1;
+
+        & .card_figure_summary_actions{
+            box-shadow: var(--section-shadow);
+            @apply w-full rounded-lg border border-wa-border-box-color px-4 pt-3;
+
+            & div:nth-child(1){
+                @apply flex;
+            }
+
+            & .card_figures{
+                @apply h-full py-2 mb-8;
+            }
+
+            & .wallet_balance_figures{
+                @apply flex flex-col px-1;
+
+                & p:nth-child(1){
+                    font-family: 'IBM Plex ExtraLight';
+                    @apply flex gap-3 font-semibold;
+                }
+
+                & p:nth-child(2){
+                    font-family: 'IBM Plex Mono Regular';
+                    line-height: .7;
+                    font-size: 2.175rem;
+                    @apply  font-extrabold text-wa-purple-text-color;
+                }
+            }
+
+            & .fund_wallet_container{
+                @apply pt-8 px-2 flex justify-end items-center;
+
+                &__button{
+                    font-family: 'IBM Plex Sans Regular';
+                    @apply px-8 py-3 bg-wa-generalGreen text-wa-active-text border border-wa-generalGreen rounded-[4px] font-bold;
+                }
+            }
+
+            & .cards_actions {
+                @apply flex justify-between pl-2 mt-4 mb-3 w-full;
+
+                & .child{
+                    @apply flex flex-col justify-center items-center gap-6 py-1;
+
+                   & p{
+                       font-family: 'IBM Plex Sans ExtraLight';
+                        @apply text-wa-purple-text-color font-semibold;
+                    }
+                }
+            }
+        }
+
+        & .card_transactions{
+            & .recent_transactions__contents{
+                box-shadow: var(--section-shadow);
+            }
+
+            & .title{
+                @apply mb-0 pl-4;
+            }
+
+            & table thead tr th{
+                font-family: 'IBM Plex Sans Regular';
+                font-size: .905em;
+                @apply uppercase text-wa-paragraph-text-color leading-6 opacity-80;
+            }
+
+            & table thead tr td{
+                font-family: 'IBM Plex Sans Regular';
+                font-size: 1.05em;
+                @apply uppercase text-wa-paragraph-text-color leading-6;
+            }
+        }
+    }
+
+    & .side_part{
+        @apply col-span-4 h-full px-2;
+
+        & .card_details{
+            box-shadow: var(--section-shadow);
+            @apply rounded-lg border border-wa-border-box-color pt-4;
+
+            & h5{
+                font-family: 'IBM Plex Sans Regular';
+                @apply px-4 pb-4 font-semibold text-wa-purple-text-color; 
+            }
+
+            & .card_information{  
+                @apply px-4 mb-4;
+
+                & h6{
+                    font-family: 'IBM Plex Sans Regular';
+                    font-size: .875em;
+                    @apply opacity-90 text-wa-paragraph-text-color font-medium;
+                }
+
+                & div{
+                    font-family: 'IBM Plex Sans ExtraLight';
+                    @apply font-extrabold;
+                    & span{
+                        font-size: .775em;
+                        @apply cursor-pointer font-extrabold rounded-xl border bg-wa-border-box-color px-2 text-wa-active-text border-wa-border-box-color py-[1px]
+                    }
+                }    
+
+            }
+
+            & .freezeCard{
+                font-family: 'IBM Plex Sans ExtraLight';
+                @apply font-extrabold;
+            }
+
+            
+            & input:checked ~ .dot {
+                transform: translateX(100%);
+                @apply bg-wa-generalGreen;
+            }
+        }
+    }
+}
 
 
 

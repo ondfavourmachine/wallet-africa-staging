@@ -18,19 +18,19 @@
 
             <div class="cards_actions">
                 
-                    <div class="child">
+                    <a routerLink="/dashboard/cards" class="child">
                         <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
                         <p>Create New Card</p>
-                    </div>
-                    <div class="child">
+                    </a>
+                    <div (click)="openGeneralCardActions('withdraw')" class="child">
                         <span><img src="../../../assets/images/Airtime-Icon.svg" alt=""></span>
                         <p>Withdraw</p>
                     </div>
-                    <div class="child">
+                    <div (click)="openGeneralCardActions('block-card')" class="child">
                         <span><img src="../../../assets/images/Airtime-Icon.svg" alt=""></span>
                         <p>Block Card</p>
                     </div>
-                    <div class="child">
+                    <div (click)="openGeneralCardActions('change-pin')"  class="child">
                         <span><img src="../../../assets/images/Airtime-Icon.svg" alt=""></span>
                         <p>Change Pin</p>
                     </div>
@@ -76,12 +76,8 @@
                                                 </td>
                                                 <td class="py-4 pl-2 pr-6 whitespace-nowrap">
                                                     Laptop
-                                                </td>
-                                              
-                                               
-                                            </tr>
-                    
-                                           
+                                                </td>  
+                                            </tr>  
                                         </tbody>
                                     </table>
                                 </div>

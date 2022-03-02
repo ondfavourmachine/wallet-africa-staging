@@ -1,0 +1,90 @@
+
+<div *ngIf="data.cardAction == 'withdraw'" class="general_card_action w-full min-h-full">
+    <div class="content">
+        <div class="title">Withdraw</div>
+
+        <div class="form">
+            <div class="form-group w-full">
+                <label for="withdraw" class="block">Amount</label>
+                <input type="text" class="w-full reusable_input" id="withdraw" placeholder="Enter amount to withdraw">
+            </div>
+        </div>
+
+        <div class="button_container ">
+            <button class="reusable_button outlined px-8">Cancel</button>
+            <button class="reusable_button px-8">
+                Withdraw
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="data.cardAction == 'fund-card'"  class=" general_card_action  w-full min-h-full">
+    <div class="content ">
+        <div class="title">Fund Card</div>
+
+        <div class="form">
+            <div class="form-group w-full">
+                <label for="withdraw" class="block">Amount</label>
+                <input type="text" class="w-full reusable_input" id="withdraw" placeholder="Enter amount to fund">
+            </div>
+        </div>
+
+        <div class="button_container ">
+            <button class="reusable_button outlined px-8">Cancel</button>
+            <button class="reusable_button px-8">
+                Fund Card
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="data.cardAction == 'block-card'"  class=" general_card_action w-full min-h-full">
+    <div class="content ">
+        <div class="block_freeze w-full flex flex-col justify-center items-center py-2">
+                <span class="mb-3"><img src="../../../assets/images/freeze_block_icon.svg" alt=""></span>
+                <span class="text-wa-orangish-color">Block Card?</span>
+        </div>
+
+        <div class="paragraph w-full mb-4">
+            <p class="w-full break-words text-center">
+                Blocking this card will prevent any further transactions on this card.
+                You can unblock it anytime you like.
+            </p>
+        </div>
+
+        <div class="button_container ">
+            <button class="reusable_button outlined px-8">Cancel</button>
+            <button class="reusable_button orangish px-8">
+                Block
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="data.cardAction == 'freeze-card'" class=" general_card_action w-full min-h-full">
+    <div class="content ">
+        <div class="block_freeze w-full flex flex-col justify-center items-center">
+            <span class="mb-3"><img src="../../../assets/images/freeze_block_icon.svg" alt=""></span>
+            <span class="text-wa-orangish-color">Block Card?</span>
+    </div>
+
+    <div class="paragraph w-full">
+        <p class="w-full break-words text-center">
+            Blocking this card will prevent any further transactions on this card.
+            You can unblock it anytime you like.
+        </p>
+    </div>
+
+
+        <div class="button_container ">
+            <button class="reusable_button outlined px-8">Cancel</button>
+            <button class="reusable_button orangish px-8">
+                Freeze
+            </button>
+        </div>
+    </div>
+</div>

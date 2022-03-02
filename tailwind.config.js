@@ -23,7 +23,8 @@ module.exports = {
           "wa-purple-text-color": "#532d94",
           "wa-paragraph-text-color": "#40344e",
           "wa-border-box-color": "#DFE4F4",
-          "wa-border-top-color": "#ffc200"
+          "wa-border-top-color": "#ffc200",
+          "wa-orangish-color": '#e93c3c'
         }
       },
     },

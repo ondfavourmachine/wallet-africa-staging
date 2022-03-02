@@ -8,6 +8,7 @@ import { AuthorizeTransactionComponent } from '../../reusables/authorize-transac
 import { MatDialogModule } from '@angular/material/dialog';
 import { TransferSuccessfullComponent } from '../../components/transfer-successfull/transfer-successfull.component';
 import { CreateACardComponent } from '../../components/create-a-card/create-a-card.component';
+import { CardsActionComponent } from '../../reusables/cards-action/cards-action.component';
 
 
 
@@ -17,7 +18,8 @@ import { CreateACardComponent } from '../../components/create-a-card/create-a-ca
     HeaderComponent,
     AuthorizeTransactionComponent,
     TransferSuccessfullComponent,
-    CreateACardComponent
+    CreateACardComponent,
+    CardsActionComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { CreateACardComponent } from '../../components/create-a-card/create-a-ca
   exports: [
     AuthorizeTransactionComponent,
     TransferSuccessfullComponent,
+    CardsActionComponent,
     CreateACardComponent,
     FormsModule,
     ReactiveFormsModule,

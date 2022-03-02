@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CardsActionComponent } from 'src/app/reusables/cards-action/cards-action.component';
+import { CardAction } from 'src/app/reusables/models/generalModels';
 
 @Component({
   selector: 'app-cards-overview',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsOverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  openGeneralCardActions(actions: CardAction){
+    const cardAction: CardAction = actions
+    const dialog = this.dialog.open(CardsActionComponent, {
+      width: '25vw',
+      height: '40vh',
+      panelClass: 'card-actions',
+      data: {cardAction}
+    })
   }
 
 }

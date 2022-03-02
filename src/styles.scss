@@ -132,6 +132,11 @@
     backdrop-filter: blur(4px);
 }
 
+.reusable_input{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    @apply  text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:text-wa-muted-text;
+}
+
 
 .reusable_button{
     font-size: 1.15rem;
@@ -139,7 +144,7 @@
     @apply px-6 bg-wa-generalGreen cursor-pointer py-2 ml-2 text-wa-active-text rounded-sm text-sm;
 
     &.outlined{
-        @apply bg-white text-wa-purple-text-color border border-wa-purple-text-color rounded-[4px];
+        @apply bg-white text-wa-purple-text-color border border-wa-purple-text-color rounded-sm;
     }
 
     &.extra_padding{
@@ -993,6 +998,12 @@
     @apply py-1;
 }
 
+.card-actions .mat-dialog-container{
+    @apply py-2 px-2;
+}
+
+
+
 // ends here
 
 
@@ -1146,7 +1157,28 @@
                 @apply flex justify-between pl-2 mt-4 mb-3 w-full;
 
                 & .child{
-                    @apply flex flex-col justify-center items-center gap-6 py-1;
+                    z-index: 1;
+                    @apply cursor-pointer relative px-4 flex flex-col justify-center items-center gap-6 py-1;
+
+                    &::after{
+                        content: '';
+                        z-index: -1;
+                        position: absolute;
+                        background-color: rgba(245, 245, 255, 0.5);
+                        right: 0;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        transform: scale(0);
+                        border-radius: 50%;
+                        box-shadow: var(--wa-box-shadow);
+                        transition: all 150ms ease-in-out;
+                    }
+
+                    &:hover::after{
+                        border-radius: 4px;
+                        transform: scale(1);
+                    }
 
                    & p{
                        font-family: 'IBM Plex Sans ExtraLight';
@@ -1222,6 +1254,52 @@
                 @apply bg-wa-generalGreen;
             }
         }
+    }
+}
+
+
+//  card actions
+.general_card_action{
+    & .content{
+       @apply  w-full flex h-full flex-col gap-5;
+
+       & .title{
+           font-family: "IBM Plex Sans Regular";
+           font-size: 1.2em;
+           @apply text-center font-semibold py-3;
+       }
+    }
+    & .form{
+       font-family: 'IBM Plex Sans Regular';
+       @apply  w-full h-full px-5 mb-10;
+
+       & label{
+        color: rgba(36, 12, 64, 1);
+        @apply font-normal mb-1;
+       }
+    }
+
+    & .button_container{
+        @apply w-full flex gap-5 font-normal justify-center;
+    }
+
+    & button{
+        @apply px-12;
+    }
+
+
+    & button:nth-child(1){
+        @apply ml-0;
+    }
+
+    & button.orangish{
+        @apply bg-wa-orangish-color text-white;
+    }
+
+    & .paragraph{
+        font-family: 'IBM Plex Sans Regular';
+        font-size: .855em;
+        color: rgba(64, 52, 78, 1);
     }
 }
 

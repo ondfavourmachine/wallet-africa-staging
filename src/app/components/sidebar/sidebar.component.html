@@ -3,35 +3,34 @@
         <img src="../../../assets/images/wallets_africa_1.svg" alt="">
     </div> 
     <div class="other_contents">
-        <ul>
+        <ul >
             <li [routerLink] = "['overview']"  [routerLinkActive]="['active']" > <span class=""><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
             <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']"><span><img src="../../../assets/images/Wallet.svg" alt=""></span> Wallets</li>
-            <li (click)="openAndClose($event)" class="payments"> 
+            <li (click)="openAndClose($event, 'payments')" class="payments"> 
                 <div class="flex w-full items-center justify-between">
                     <span class="flex"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> Payments</span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
-                </div>   
-
-                <ul class="sublist">
-                    <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize">transfer to business</li>
-                    <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize">Wallet (Single)</li>
-                    <li [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize">bank account (single)</li>
-                    <li [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize">mobile money (single)</li>
-                    <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize">wallet (bulk)</li>
-                    <li class="capitalize">bank account (bulk)</li>
-                    <li class="capitalize">mobile money (bulk)</li>
-                </ul>
+                </div>  
             </li>
-            <li (click)="openAndClose($event)" class="transactions">
+            <ul class="sublist payments_sublist">
+                <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize">transfer to business</li>
+                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize">Wallet (Single)</li>
+                <li [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize">bank account (single)</li>
+                <li [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize">mobile money (single)</li>
+                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize">wallet (bulk)</li>
+                <li class="capitalize">bank account (bulk)</li>
+                <li class="capitalize">mobile money (bulk)</li>
+            </ul>
+            <li (click)="openAndClose($event, 'transactions')" class="transactions">
                 <div class="flex w-full items-center justify-between">
                     <span class="flex"><img class="mr-3" src="../../../assets/images/Clipboard-list.svg" alt=""> Transactions</span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
                 </div> 
-                <ul class="sublist">
-                    <li class="capitalize">history</li>
-                    <li class="capitalize">reoccuring</li>
-                </ul>
             </li>
+            <ul class="sublist transactions_sublist">
+                <li class="capitalize">history</li>
+                <li class="capitalize">reoccuring</li>
+            </ul>
             <li [routerLink] = "['cards']"  [routerLinkActive]="['active']" ><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Cards</li>
             <li [routerLink] = "['buy_airtime']"  [routerLinkActive]="['active']"><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Buy Airtime</li>
             <li> 
@@ -41,15 +40,18 @@
                 <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
             </li>
         </ul>
+
+
+        <div class="contact_us">
+            <div>
+                <img src="../../../assets/images/Question.svg" alt="">
+            </div>
+            <div class="flex flex-col gap-3">
+                <span class="">Having Troubles?</span>
+                <span class="font-semibold text-wa-purple-text-color capitalize">contact us</span>
+            </div>
+        </div>
     </div>
 
-    <div class="contact_us">
-        <div>
-            <img src="../../../assets/images/Question.svg" alt="">
-        </div>
-        <div class="flex flex-col gap-3">
-            <span class="">Having Troubles?</span>
-            <span class="font-semibold text-wa-purple-text-color capitalize">contact us</span>
-        </div>
-    </div>
+   
 </div>

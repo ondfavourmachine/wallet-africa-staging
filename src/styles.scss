@@ -833,30 +833,30 @@
 
 // sidebar styles here
 .sideBar_container{
-    @apply  w-2/12 h-full ;
+    @apply  w-2/12 h-full;
 }
 
 
 .sideBar_contents{
     background-color: rgba(245, 245, 255, 0.4);
-    @apply w-full h-full px-6;
+    @apply w-full h-full px-6 ;
 
     & .image_container{
         @apply  h-1/6 w-full flex justify-center items-center;
 
         & img{
             width: 70%;
-            max-width: 80%;
-            
+            max-width: 80%;    
         }
     }
 
     & .other_contents{
-        @apply transition-all h-4/6 w-full pt-5;
+        @apply transition-all h-5/6 w-full pt-5 flex flex-col justify-between pb-2;
 
+     
         & ul{
             background-color: var(--wa-box-background);
-            @apply px-1 w-full h-full;
+            @apply px-1 w-full h-auto;
         }
 
         & li{
@@ -879,7 +879,7 @@
         }
 
         & .payments, .transactions{
-            @apply transition-all flex flex-col cursor-pointer h-10 overflow-hidden;
+            @apply transition-all mb-0 flex flex-col cursor-pointer h-10 overflow-hidden;
             
             & ul{
                 font-family: var(--wa-commonlyused-font);
@@ -894,19 +894,30 @@
           }
         }
 
-        &.elongate{
-            @apply h-auto;
+
+        & .sublist{
+            @apply transition-all overflow-hidden h-0 pl-[30px] pr-0;
+            & li {
+                font-size: .85rem;
+                 @apply transition-all hover:rounded-sm  hover:translate-x-2  hover:text-wa-purple-text-color
+            }
+
+            &.elongate{
+                @apply h-64;
+            } 
         }
 
-        & .sublist li{
-           @apply transition-all hover:rounded-sm hover:translate-x-2 hover:text-wa-purple-text-color
+        & .transactions_sublist.elongate{
+            @apply h-24;
+        }
+
+        & .contact_us{
+            font-family: var(--wa-commonlyused-font);
+            @apply w-full h-auto bg-white border border-wa-border-box-color rounded-[7px] py-4 flex justify-start px-3 gap-3;
         }
     }
 
-    & .contact_us{
-        font-family: var(--wa-commonlyused-font);
-        @apply w-full h-auto bg-white border border-wa-border-box-color rounded-[7px] py-4 flex justify-start px-3 gap-3;
-    }
+    
 }
 // ends here
 

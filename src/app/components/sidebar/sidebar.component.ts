@@ -12,11 +12,14 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openAndClose(event: Event){
+  openAndClose(event: Event, primaryClassName: string){
+    // debugger;
     const li = event.target instanceof HTMLLIElement ? event.target as HTMLLIElement : (event.target as HTMLLIElement).closest('li');
-    const parentDiv = li?.closest('div.other_contents') as HTMLDivElement;
-    li?.classList.toggle('open');
-    parentDiv.classList.toggle('elongate');
+    if(li){
+      const ulSiblingElement = document.querySelector(`.${primaryClassName}_sublist`);
+    ulSiblingElement?.classList.toggle('elongate');
+    }
+    
   }
 
 }

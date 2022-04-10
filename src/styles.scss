@@ -127,6 +127,8 @@
     font-style: italic;
 }
 
+
+
 .cdk-overlay-backdrop{
     background: rgba(71, 64, 78, 0.6);
     backdrop-filter: blur(4px);
@@ -880,8 +882,18 @@
 // mobile side bar here
 .mobileMenuSideBar{
     z-index: 200;
-    @apply absolute h-full w-11/12 sm:hidden sm:z-0 backdrop-blur-lg;
+    transform: translateX(-100%);
+    transition: all .2s ease;
+    @apply absolute h-full w-11/12 sm:hidden sm:z-0 backdrop-blur-lg; 
+
+    &.slide_in{
+      transform: translateX(0);
+    }
 }
+
+
+
+
 
 
 .sideBar_contents{

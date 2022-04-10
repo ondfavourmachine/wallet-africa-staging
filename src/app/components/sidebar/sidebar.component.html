@@ -1,40 +1,39 @@
 <div class="sideBar_contents">
     <div class="image_container ">
         <img src="../../../assets/images/wallets_africa_1.svg" alt="">
-
-        <span class="sideBar_close"></span>
+        <span (click)="toggleMobileMenuSideBar()" class="sideBar_close"></span>
     </div> 
     <div class="other_contents">
         <ul >
-            <li [routerLink] = "['overview']"  [routerLinkActive]="['active']" > <span class=""><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
-            <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']"><span><img src="../../../assets/images/Wallet.svg" alt=""></span> Wallets</li>
-            <li (click)="openAndClose($event, 'payments')" class="payments"> 
+            <li  [routerLink] = "['overview']"  [routerLinkActive]="['active']" Sidebar> <span class="" ><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
+            <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" Sidebar><span><img src="../../../assets/images/Wallet.svg" alt=""></span> Wallets</li>
+            <li (click)="openAndClose($event)" class="payments"> 
                 <div class="flex w-full items-center justify-between">
                     <span class="flex"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> Payments</span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
                 </div>  
             </li>
             <ul class="sublist payments_sublist">
-                <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize">transfer to business</li>
-                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize">Wallet (Single)</li>
-                <li [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize">bank account (single)</li>
-                <li [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize">mobile money (single)</li>
-                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize">wallet (bulk)</li>
-                <li class="capitalize">bank account (bulk)</li>
-                <li class="capitalize">mobile money (bulk)</li>
+                <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>transfer to business</li>
+                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>Wallet (Single)</li>
+                <li [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize" Sidebar>bank account (single)</li>
+                <li [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize" Sidebar>mobile money (single)</li>
+                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>wallet (bulk)</li>
+                <li class="capitalize" Sidebar>bank account (bulk)</li>
+                <li class="capitalize" Sidebar>mobile money (bulk)</li>
             </ul>
-            <li (click)="openAndClose($event, 'transactions')" class="transactions">
+            <li (click)="openAndClose($event)" class="transactions">
                 <div class="flex w-full items-center justify-between">
                     <span class="flex"><img class="mr-3" src="../../../assets/images/Clipboard-list.svg" alt=""> Transactions</span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
                 </div> 
             </li>
             <ul class="sublist transactions_sublist">
-                <li class="capitalize">history</li>
-                <li class="capitalize">reoccuring</li>
+                <li class="capitalize" Sidebar>history</li>
+                <li class="capitalize" Sidebar>reoccuring</li>
             </ul>
-            <li [routerLink] = "['cards']"  [routerLinkActive]="['active']" ><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Cards</li>
-            <li [routerLink] = "['buy_airtime']"  [routerLinkActive]="['active']"><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Buy Airtime</li>
+            <li [routerLink] = "['cards']"  [routerLinkActive]="['active']" Sidebar><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Cards</li>
+            <li [routerLink] = "['buy_airtime']"  [routerLinkActive]="['active']" Sidebar><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Buy Airtime</li>
             <li> 
                 <span class="flex-auto flex items-center">
                     <span><img src="../../../assets/images/Box_3.svg" alt=""></span> More

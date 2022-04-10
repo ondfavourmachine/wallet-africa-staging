@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,14 +12,20 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openAndClose(event: Event, primaryClassName: string){
-    // debugger;
+  openAndClose(event: Event){
     const li = event.target instanceof HTMLLIElement ? event.target as HTMLLIElement : (event.target as HTMLLIElement).closest('li');
     if(li){
       const ulSiblingElement = li.nextElementSibling;
-    ulSiblingElement?.classList.toggle('elongate');
-    }
+      ulSiblingElement?.classList.toggle('elongate');
+    } 
     
   }
+
+  toggleMobileMenuSideBar(){
+    const mobileMenuSideBar = document.querySelector('.mobileMenuSideBar') as HTMLElement;
+    mobileMenuSideBar.classList.toggle('slide_in');
+  }
+
+
 
 }

@@ -11,6 +11,7 @@ import { AirtimeComponent } from 'src/app/components/airtime/airtime.component';
 import { MobileMoneyComponent } from '../../components/mobile-money/mobile-money.component';
 import { CardsComponent } from '../../components/cards/cards.component';
 import { CardsOverviewComponent } from 'src/app/components/cards-overview/cards-overview.component';
+// import { SidebarDirective } from 'src/app/directives/sideBar/sidebar.directive';
 // import { PersonalDocumentsComponent } from 'src/app/components/personal-documents/personal-documents.component';
 
 const routes: Routes = [
@@ -40,7 +41,8 @@ const routes: Routes = [
     AirtimeComponent,
     MobileMoneyComponent,
     CardsComponent,
-    CardsOverviewComponent
+    CardsOverviewComponent,
+    
   ],
   imports: [
     CommonModule,

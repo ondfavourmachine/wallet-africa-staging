@@ -9,17 +9,20 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TransferSuccessfullComponent } from '../../components/transfer-successfull/transfer-successfull.component';
 import { CreateACardComponent } from '../../components/create-a-card/create-a-card.component';
 import { CardsActionComponent } from '../../reusables/cards-action/cards-action.component';
+import { SidebarDirective } from 'src/app/directives/sideBar/sidebar.directive';
 
 
 
 @NgModule({
   declarations: [
+    SidebarDirective,
     SidebarComponent,
     HeaderComponent,
     AuthorizeTransactionComponent,
     TransferSuccessfullComponent,
     CreateACardComponent,
-    CardsActionComponent
+    CardsActionComponent,
+ 
   ],
   imports: [
     CommonModule,

@@ -18,8 +18,8 @@ export class TransferToBusinessComponent implements OnInit {
 
   authorizeTransaction(){
     const dialog = this.dialog.open(AuthorizeTransactionComponent, {
-      width: '30vw',
-      height: '42vh',
+      // width: '30vw',
+      // height: '42vh',
       panelClass: 'authorize_transaction'
     })
   }

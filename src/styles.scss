@@ -1098,8 +1098,24 @@
 
 
 // Material Style Overides here
-.authorize_transaction .mat-dialog-container{
-    @apply py-1;
+.authorize_transaction {
+    width: 95vw;
+    min-height: 32vh;
+    max-width: 95vw !important;
+    @media (min-width: 768px) {
+        width:  30vw;
+        height: 42vh;  
+    }
+    & .mat-dialog-container{
+        @apply py-1 px-4 overflow-hidden;
+
+        @media (min-width: 768px) {
+            // width:  30vw;
+            // height: 42vh;  
+            padding: 24px;
+        }
+
+    }
 }
 
 .card-actions .mat-dialog-container{

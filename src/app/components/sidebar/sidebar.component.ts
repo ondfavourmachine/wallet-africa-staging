@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
     // debugger;
     const li = event.target instanceof HTMLLIElement ? event.target as HTMLLIElement : (event.target as HTMLLIElement).closest('li');
     if(li){
-      const ulSiblingElement = document.querySelector(`.${primaryClassName}_sublist`);
+      const ulSiblingElement = li.nextElementSibling;
     ulSiblingElement?.classList.toggle('elongate');
     }
     

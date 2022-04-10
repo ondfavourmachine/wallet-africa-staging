@@ -336,27 +336,53 @@
 
 
 .main_container, .personal_documents_upload{
-    @apply w-10/12 h-full  px-6 bg-white;
+    @apply w-screen sm:w-10/12 h-full px-1 sm:px-6 bg-white;
 
     & .header{
-        @apply h-auto mb-3 px-3;
+        @apply h-auto mb-3 px-1 sm:px-3;
 
         & .header_contents{
             font-family: var(--wa-commonlyused-font);
-            @apply h-24 relative z-20 w-full border-b-2 border-b-[#ececff] flex items-end pb-4;
+            @apply h-24 mt-1 sm:mt-0 relative z-20 w-full border-b-2 border-b-[#ececff] flex items-end pb-4;
+
+            & .notification_bell{
+                @apply mr-6 sm:mr-1;
+            }
 
             & .notifications_and_dropDown{
-                @apply flex-auto flex justify-end items-center mx-1 cursor-pointer;
+                @apply flex-auto flex relative justify-end items-center mx-1 cursor-pointer;
             }
+
+            & .hamburger_menu{  
+                inset: 15px 100% 1px 0;
+                @apply flex sm:hidden absolute w-8 h-1 bg-[#40344E];
+
+                &::after, &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 100%;
+                    @apply w-8 h-1 bg-[#40344E];
+                }
+
+                &::before{
+                    top: -8px
+                }
+
+                &::after{
+                    top: 8px;
+                }
+            }
+            
 
             & .salutation{
                 font-family: 'IBM Plex Medium';
-                font-size: 1.375rem;
-                @apply px-1 flex-grow;
+                font-size: clamp(.5rem, 2vw, 1.5rem);
+                @apply px-1 hidden sm:flex sm:flex-grow;
             }
 
             & .profile_pic{
-                @apply  ml-8 mr-4
+                @apply hidden sm:flex  sm:ml-8 sm:mr-4
             }
 
             & .name_details{
@@ -366,8 +392,22 @@
                 @apply flex justify-between items-center cursor-pointer font-semibold relative hover:py-1 hover:px-1 hover:rounded-sm;
 
                 &:hover{
-                    border: 1px solid rgba(83, 45, 148, 0.4);
-                    box-shadow: rgba(83, 45, 148, 0.4) 0px 1px 4px;
+                    @media(min-width: 768px){
+                        border: 1px solid rgba(83, 45, 148, 0.4);
+                        box-shadow: rgba(83, 45, 148, 0.4) 0px 1px 4px;
+                    }
+                }
+
+                & .name_of_loggedInPerson{
+                    @apply hidden sm:flex;
+                }
+
+                & .chevron_down{
+                    @apply hidden sm:flex;
+                }
+
+                & .profile_pic{
+                    @apply flex sm:hidden;
                 }
 
                 & .actual_dropdown{
@@ -831,9 +871,16 @@
     }
 }
 
+
 // sidebar styles here
 .sideBar_container{
-    @apply  w-2/12 h-full;
+    @apply hidden sm:block sm:w-2/12 h-full;
+}
+
+// mobile side bar here
+.mobileMenuSideBar{
+    z-index: 200;
+    @apply absolute h-full w-11/12 sm:hidden sm:z-0 backdrop-blur-lg;
 }
 
 
@@ -842,16 +889,50 @@
     @apply w-full h-full px-6 ;
 
     & .image_container{
-        @apply  h-1/6 w-full flex justify-center items-center;
+        @apply relative  h-1/6 lg:h-[100px] w-full flex justify-start sm:justify-center items-center;
 
         & img{
-            width: 70%;
-            max-width: 80%;    
+            width: clamp(55%, 80%, 1.5vw);
+            // max-width: 80%;    
+        }
+
+        & .sideBar_close{
+                position: absolute;
+                right: -10px;
+                top: 32px;
+                width: 32px;
+                height: 32px;
+                opacity: 0.7;
+                border-radius: 50%;
+                transform: scale(0.8);
+                transition: all .15s ease;
+                @apply p-4 cursor-pointer flex justify-center items-center sm:hidden;
+            
+            
+              &::before, &::after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 33px;
+                width: 2px;
+                background-color: #000000;
+              }
+              &::before {
+                transform: rotate(45deg);
+              }
+              &::after {
+                transform: rotate(-45deg);
+              }
+
+              &:hover {
+                opacity: 1;
+                transform: rotate(-100deg) scale(1);
+              }
         }
     }
 
     & .other_contents{
-        @apply transition-all h-5/6 w-full pt-5 flex flex-col justify-between pb-2;
+        @apply transition-all h-5/6 w-full pt-5 flex flex-col gap-32 sm:gap-0 sm:justify-between pb-2;
 
      
         & ul{

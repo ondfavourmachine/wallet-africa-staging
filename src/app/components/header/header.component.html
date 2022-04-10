@@ -1,16 +1,23 @@
 <div class="header_contents ">
-    <div class="salutation ">
+    <div class="salutation">
         {{ HeaderInfo?.headerText }}
     </div>
 
-    <div class="notifications_and_dropDown ">
-        <span [style.opacity]="HeaderInfo?.showNotificationBell ? '1': '0'" class="notification_bell"><img src="../../../assets/images/Notifications_bell.svg" alt=""></span>
+    <div class="notifications_and_dropDown">
+        <span (click)="toggleMobileMenuSideBar()" class="hamburger_menu">
+
+        </span>
+        <span [style.opacity]="HeaderInfo?.showNotificationBell ? '1': '0'" class="notification_bell">
+            <img src="../../../assets/images/Notifications_bell.svg" alt=""></span>
 
         <span  class="profile_pic"><img src="../../../assets/images/profile_pic.png" alt=""></span>
 
-        <span (click)="toggle($event)" class="name_details">Oke Obi-Enadhuze 
-            <span class="chevron_down ml-3"><img src="../../../assets/images/ic24-chevron-down.svg" alt="">
+        <span (click)="toggle($event)" class="name_details">
+            <span class="name_of_loggedInPerson">Oke Obi-Enadhuze</span>
+            <span class="chevron_down sm:ml-3"><img src="../../../assets/images/ic24-chevron-down.svg" alt="">
             </span>
+
+            <span  class="profile_pic"><img src="../../../assets/images/profile_pic.png" alt=""></span>
 
             <div class="actual_dropdown ">
                 <div class="w-full h-full">

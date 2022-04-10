@@ -21,7 +21,12 @@ export class HeaderComponent implements OnInit, OnChanges {
 
 
   toggle(event: Event){
-    const actualDropDown = (event.target as HTMLElement).querySelector('.actual_dropdown') as HTMLElement;
+    const actualDropDown = document.querySelector('.actual_dropdown') as HTMLElement;
     actualDropDown.classList.toggle('show');
+  }
+
+  toggleMobileMenuSideBar(){
+    const mobileMenuSideBar = document.querySelector('.mobileMenuSideBar') as HTMLElement;
+    mobileMenuSideBar.classList.toggle('slide_in');
   }
 }

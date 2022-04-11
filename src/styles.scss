@@ -219,7 +219,7 @@
               & .welcome_title_supportingText{
                 font-family: 'IBM Plex Sans Regular';
                 font-size: .975rem;
-                @apply font-normal;
+                @apply font-normal px-2 text-center sm:text-left;
             }
           }
 
@@ -323,12 +323,12 @@
                 }
 
                 & .bold_title{
-                    font-size: 1.175rem;
+                    font-size: min(1.175rem, 6vw);
                     @apply font-semibold mb-3;
                 }
 
                 & .description{
-                    font-size: 0.975rem;
+                    font-size: min(0.975rem, 4.5vw);
                     @apply w-4/5 break-words text-center font-normal;
                 }
             }

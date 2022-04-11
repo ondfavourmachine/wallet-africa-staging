@@ -82,20 +82,20 @@
 
 
 <ng-container *ngIf="view == 2">
-    <div class="sign_in">
+    <div class="sign_in overflow-auto">
         <div class="header">
             <div class="wallet_icon flex-auto px-4">
                 <img src="../../../assets/images/wallets_africa 1.svg" alt="">
             </div>
         </div>
         <div class=" body">
-            <div class="w-2/5 h-4/6 ">
+            <div class="w-full sm:w-2/5 h-4/6 ">
                 <div class="title">
                     <p class="signup">Great, let's tighten this up!</p>
-                    <span class=" w-7/12 break-words text-center"> Please create a secure password that is at least 8 characters long </span>
+                    <span class="w-9/12 sm:w-7/12 break-words text-center"> Please create a secure password that is at least 8 characters long </span>
                 </div>
     
-                <div class="forms w-11/12 h-5/6 mx-auto px-2 pt-4 border border-white rounded-md bg-white">
+                <div class="forms w-11/12 h-auto sm:h-5/6 mx-auto px-2 pt-4 border border-white rounded-md bg-white">
                     <div class="forms_content signup w-full h-4/6">
                         <div class="form-group w-full">
                             <input placeholder="Enter a password" type="text" class="form-control mb-1">
@@ -110,7 +110,7 @@
                        
                     </div>
     
-                    <div class="w-full submitBtn mt-10 flex justify-end items-center pr-3">
+                    <div class="w-full submitBtn mt-3 pb-3 sm:pb-0 sm:mt-10 flex justify-end items-center pr-3">
                         <button (click)="view = 3" class="reusable_button ml-0 capitalize">Create my account</button>
                     </div> 
                 </div>
@@ -123,27 +123,27 @@
 
 
 <ng-container *ngIf="view == 3">
-    <div class="sign_in">
+    <div class="sign_in overflow-auto">
         <div class="header">
             <div class="wallet_icon flex-auto px-4">
                 <img src="../../../assets/images/wallets_africa 1.svg" alt="">
             </div>
         </div>
         <div class=" body">
-            <div class="w-2/5 h-4/6 ">
+            <div class="w-full sm:w-2/5 h-4/6 ">
                 <div class="title">
                     <p class="signup">Great, let's tighten this up!</p>
-                    <span class=" w-5/12 break-words text-center"> Please enter the 4-digit code sent to <strong>2348010902837</strong> </span>
+                    <span class="w-9/12 sm:w-5/12 break-words text-center"> Please enter the 4-digit code sent to <strong>2348010902837</strong> </span>
                 </div>
     
-                <div class="forms w-11/12 h-5/6 mx-auto px-2 pt-4 border border-white rounded-md bg-white">
+                <div class="forms w-11/12 h-auto sm:h-5/6 mx-auto px-2 pt-4 border border-white rounded-md bg-white">
                     <div class="forms_content OTP w-full h-auto mb-2">
                         <div class="form-group w-full">
                             <input placeholder="OTP" type="text" class="form-control">
                         </div> 
                     </div>
     
-                    <div class="w-full submitBtn flex flex-col justify-center mt-4 items-center pr-3">
+                    <div class="w-full submitBtn flex flex-col justify-center mt-4 items-center pr-3 pb-4 sm:pb-0">
                         <button (click)="view = 3" class="mb-3 reusable_button third ml-0 capitalize">Continue</button>
                         <p>Did’nt get the SMS <strong class="">Resend</strong> Code</p>
                         <p>Change phone number</p>

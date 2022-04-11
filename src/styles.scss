@@ -193,6 +193,9 @@
                   &.signup{
                       font-family: 'IBM Plex Medium'; 
                       letter-spacing: .05em;
+                      font-size: min(1.5rem, 6vw);
+                      @apply text-center sm:text-left;
+
                   }
 
                   &.login_title{

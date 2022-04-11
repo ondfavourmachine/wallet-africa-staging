@@ -169,7 +169,7 @@
     @apply w-screen h-screen max-w-full max-h-full bg-wa-bg-loginAndSignup;
 
    & .header{
-       @apply h-[12vh] py-7 w-full flex justify-between items-center px-9;
+       @apply h-[12vh] py-7 w-full flex justify-between items-center px-0 sm:px-9;
 
       & .other_stuff{
           & span{
@@ -214,7 +214,7 @@
 
               & .welcome_title{
                 font-family: 'IBM Plex Sans Regular';
-                @apply font-medium mb-1;
+                @apply font-medium mb-1 w-full sm:w-auto flex justify-center items-center sm:block;
                }
               & .welcome_title_supportingText{
                 font-family: 'IBM Plex Sans Regular';
@@ -307,11 +307,11 @@
         }
 
         & .boxes_for_personalOrBusiness{
-            @apply flex justify-center gap-12 px-4 py-2;
+            @apply flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 px-4 py-2;
 
             & .box_for_personal_wallet, .box_for_business_wallet{
                 font-family: 'IBM Plex Sans Regular';
-                @apply w-1/2 h-[47vh] py-5 px-9 rounded-[7px] border border-white bg-white flex flex-col justify-center items-center;
+                @apply sm:w-1/2 sm:h-[47vh] py-5 sm:px-9 rounded-[7px] border border-white bg-white flex flex-col justify-center items-center;
 
                 & .image_background{
                     @apply h-32 w-32 rounded-full mb-5 relative border border-[#f7f9fd] bg-[#F7F9FD];

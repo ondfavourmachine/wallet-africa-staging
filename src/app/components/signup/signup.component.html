@@ -1,17 +1,17 @@
-<div *ngIf="view == 1" class="sign_in">
+<div *ngIf="view == 1" class="sign_in overflow-auto">
     <div class="header">
         <div class="wallet_icon flex-auto px-4">
-            <img src="../../../assets/images/wallets_africa_1.svg" alt="">
+            <img class="max-w-[65%] sm:max-w-[80%]" src="../../../assets/images/wallets_africa_1.svg" alt="">
         </div>
 
         <div class="other_stuff mx-4">
-            <span class="">Have an account:</span> <button class="reusable_button">Signin</button>
+            <span class="hidden md:inline-block">Have an account:</span> <button class="reusable_button">Signin</button>
         </div>
     </div>
     <div class=" body">
-        <div class="w-2/5 h-auto">
-            <div class=" title">
-                <p class="">Create a Personal account</p>
+        <div class="w-full sm:w-2/5 h-auto">
+            <div class="title">
+                <p class="signup_title">Create a Personal account</p>
                 <span class=""> We only fill your inbox with happiness </span>
             </div>
 
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="mb-10">
-                    <h4 class="px-2">Your date of birth</h4>
+                    <h4 class="w-full sm:w-auto text-center sm:text-left px-2">Your date of birth</h4>
                     <div class="dateOfBirth_details">
                         <div class="form-group">
                             <select name="" id="currency">

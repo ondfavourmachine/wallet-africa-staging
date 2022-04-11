@@ -600,7 +600,7 @@
     & .verification_incomplete{
         font-family: var(--wa-commonlyused-font);
         background-color: rgba(245, 245, 255, 0.4);
-        @apply h-40 w-full mt-5 border-t-2 rounded-sm border-wa-border-top-color flex gap-x-5;
+        @apply sm:h-40 hidden w-full mt-5 border-t-2 rounded-sm border-wa-border-top-color sm:flex gap-x-5;
 
         & .text_half{
             // font-family: var(--wa-commonlyused-font);
@@ -657,15 +657,35 @@
 
     }
 
+    & .mobile_verification_incomplete{
+        background-color: rgba(245, 245, 255, 0.4);
+        @apply sm:hidden h-16 rounded-md w-full my-3 border-t-2 border-wa-border-top-color;
+
+        & p{
+            font-family: var(--wa-commonlyused-font);
+            font-size: 1rem;
+            @apply transition-all text-center; 
+
+            & a{
+                font-size: .895rem;
+                @apply underline cursor-pointer text-wa-purple-text-color;
+            }
+        }
+    }
+
     & .wallet_Balance{
         font-family: var(--wa-commonlyused-font);
         @apply mt-6;
 
         &__contents{
-            @apply flex gap-8 w-full;
+            @apply flex flex-col gap-4 sm:flex-row sm:gap-8 w-full;
 
             & div{
-                @apply w-1/2 h-40;
+                @apply w-full sm:w-1/2 h-40;
+            }
+
+            & .wallet_balance_container{
+                @apply border-2 border-wa-border-box-color rounded-[4px] sm:border-0 h-auto sm:h-40 pb-2 sm:pb-0;
             }
 
             & div:nth-child(1){
@@ -746,7 +766,7 @@
         }
 
         &__gridparent{
-            @apply grid grid-cols-4 grid-rows-1 gap-5;
+            @apply grid grid-cols-1 grid-rows-4 gap-y-3 sm:grid-cols-4 sm:grid-rows-1 sm:gap-5;
 
             & .grid_child{
                 background-color: rgba(245, 245, 255, 0.4);

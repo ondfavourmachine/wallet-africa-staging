@@ -45,8 +45,9 @@ export class CardsComponent implements OnInit, AfterViewInit {
 
  createACard(){
   const dialog = this.dialog.open(CreateACardComponent, {
-    width: '32vw',
-    height: 'auto', 
+    // width: '32vw',
+    // height: 'auto', 
+    panelClass: 'CreateACard'
   });
   dialog.afterClosed().subscribe(val => console.log(val))
  }

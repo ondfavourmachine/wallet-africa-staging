@@ -819,10 +819,10 @@
 
    & .cards_section{
         &__gridparent{
-            @apply grid grid-cols-[repeat(4,_minmax(50px,_150px))] grid-rows-[repeat(2,_minmax(50px,_100px))] gap-5;
+            @apply grid grid-cols-1 grid-rows-2 sm:grid-cols-[repeat(4,_minmax(50px,_150px))] sm:grid-rows-[repeat(2,_minmax(50px,_100px))] gap-5;
 
             & .grid_child{
-                @apply h-48 col-span-2 cursor-pointer row-span-2;
+                @apply h-48 col-span-1 row-span-2 sm:col-span-2 cursor-pointer sm:row-span-2;
 
                 & p{
                     @apply my-1;
@@ -1150,6 +1150,27 @@
     }
 }
 
+.CreateACard {
+    width: 95vw;
+    min-height: 32vh;
+    max-width: 95vw !important;
+    @media (min-width: 768px) {
+        width:  30vw;
+        height: auto;  
+    }
+    & .mat-dialog-container{
+        @apply py-3 px-4 overflow-hidden;
+
+        @media (min-width: 768px) {
+            // width:  30vw;
+            // height: 42vh;  
+            padding: 24px;
+        }
+
+    }
+}
+
+
 .card-actions .mat-dialog-container{
     @apply py-2 px-2;
 }
@@ -1262,11 +1283,11 @@
 // Cards overview component
 .cards_overview{
     --section-shadow: 0px 4px 10px rgba(154, 171, 237, 0.06);
-    @apply w-full grid grid-cols-12 gap-2 grid-rows-1 h-screen;
+    @apply w-full grid grid-cols-12 gap-2 grid-rows-1 h-screen mb-5;
 
 
     & .major_part{
-        @apply col-span-8 h-full px-1;
+        @apply col-span-12 sm:col-span-8 h-full px-1;
 
         & .card_figure_summary_actions{
             box-shadow: var(--section-shadow);
@@ -1364,7 +1385,7 @@
     }
 
     & .side_part{
-        @apply col-span-4 h-full px-2;
+        @apply hidden sm:col-span-4 h-full px-2;
 
         & .card_details{
             box-shadow: var(--section-shadow);

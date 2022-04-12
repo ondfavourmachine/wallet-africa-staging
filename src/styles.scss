@@ -1229,8 +1229,8 @@
         height: auto;  
     }
     & .mat-dialog-container{
+       
         @apply py-3 px-4 overflow-hidden;
-
         @media (min-width: 768px) {
             // width:  30vw;
             // height: 42vh;  
@@ -1241,9 +1241,25 @@
 }
 
 
-.card-actions .mat-dialog-container{
-    @apply py-2 px-2;
+.card-actions {
+    width: 90vw;
+    max-width: 90vw !important;
+    height: auto;
+    @media (min-width: 768px) {
+        max-width:  80vw !important;
+        height: auto;  
+    }
+        .mat-dialog-container{
+        @apply py-2 px-2;
+
+        @media(min-width: 768px){
+            width: '25vw';
+            height: '40vh';
+        }
 }
+
+}
+
 
 
 

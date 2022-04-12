@@ -20,8 +20,8 @@ export class CardsOverviewComponent implements OnInit {
   openGeneralCardActions(actions: CardAction){
     const cardAction: CardAction = actions
     const dialog = this.dialog.open(CardsActionComponent, {
-      width: '25vw',
-      height: '40vh',
+      // width: '25vw',
+      // height: '40vh',
       panelClass: 'card-actions',
       data: {cardAction}
     })

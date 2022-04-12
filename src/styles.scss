@@ -837,6 +837,7 @@
     }
 
     & .mobile_transactions{
+        @apply block sm:hidden;
         & .title{
                 font-family: 'IBM Plex Medium';
                 font-size: 1.295rem;
@@ -845,7 +846,7 @@
 
         & .a_mobile_transaction{
             font-family: var(--wa-commonlyused-font);
-            @apply border border-wa-border-box-color px-4 py-2 mt-2 rounded-md;
+            @apply border border-wa-border-box-color shadow-sm hover:shadow-xl px-4 py-2 mt-2 rounded-md;
 
             & .transaction_details{
                 @apply flex justify-start gap-5;
@@ -1242,9 +1243,10 @@
 
 
 .card-actions {
-    width: 90vw;
+    width: auto;
     max-width: 90vw !important;
     height: auto;
+    @apply py-2 px-2;
     @media (min-width: 768px) {
         max-width:  80vw !important;
         height: auto;  
@@ -1253,8 +1255,8 @@
         @apply py-2 px-2;
 
         @media(min-width: 768px){
-            width: '25vw';
-            height: '40vh';
+            width: 25vw;
+            height: 40vh;
         }
 }
 

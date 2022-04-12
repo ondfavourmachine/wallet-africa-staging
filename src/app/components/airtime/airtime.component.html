@@ -4,17 +4,17 @@
             <div class="w-full rounded">
                 <!-- Tabs -->
                 <ul id="tabs" class="inline-flex w-full px-1 pt-2 ">
-                  <li class="px-4 py-2 -mb-px font-semibold  border-b-2 border-wa-purple-text-color rounded-t">
+                  <li class="px-4 py-2 -mb-px w-full sm:w-auto font-semibold  text-center sm:text-start border-b-2 border-wa-purple-text-color rounded-t">
                       <a id="default-tab" class="selected" href="#first">Single Airtime</a>
                     </li>
-                  <li class="px-4 py-2 font-semibold rounded-t "><a href="#second">Bulk Airtime</a></li>
+                  <li class="px-4 py-2 font-semibold rounded-t w-full sm:w-auto text-center sm:text-start"><a href="#second">Bulk Airtime</a></li>
                 </ul>
 
                 <!-- Tab Contents -->
                 <div id="tab-contents" class="h-auto">
                     
                         <section class="transfer_to_business w-full">
-                            <div id="first" class="p-4 w-1/2 h-full flex ">
+                            <div id="first" class="p-2 sm:p-4 w-full sm:w-1/2 h-full flex ">
                                 <div class="transfer_form_container w-full pt-3 px-3 border border-wa-border-box-color rounded-[8px] mt-5">
                                     <div *ngIf="stage == 1" class="md:grid md:grid-cols-1 md:gap-2">
                                         <div class="md:col-span-1">
@@ -25,7 +25,7 @@
                                         <div class=" md:mt-0 md:col-span-1">
                                         <form >
                                             <div class="">
-                                            <div class="px-4 py-5 bg-white sm:pt-2 sm:py-5">
+                                            <div class="px-2 sm:px-4 py-5 bg-white sm:pt-2 sm:py-5">
                                                 <div class="grid grid-cols-6 gap-7">
                                                 <div class="col-span-6 ">
                                                     <input type="text" placeholder="Wallet Phone number" name="WalletPhone" id="WalletPhone" autocomplete="family-name" 
@@ -49,7 +49,7 @@
                                                 <div class="w-full py-3 mt-2">
                                                     <button type="button" 
                                                     (click)="authorizeTransaction()"
-                                                    class="w-full inline-flex justify-center py-2 px-36 border border-transparent shadow-sm text-lg font-semibold rounded-md text-wa-purple-text-color bg-wa-generalGreen hover:bg-wa-generalGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wa-purple-text-color">
+                                                    class="w-full inline-flex justify-center py-2 px-4 sm:px-36 border border-transparent shadow-sm text-lg font-semibold rounded-md text-wa-purple-text-color bg-wa-generalGreen hover:bg-wa-generalGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wa-purple-text-color">
                                                     Send for free
                                                 </button>
                                                     

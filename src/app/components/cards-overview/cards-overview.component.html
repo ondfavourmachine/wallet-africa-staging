@@ -1,4 +1,4 @@
-<div class="cards_overview relative">
+<div class="cards_overview relative overflow-auto">
 
     <div class="cards_display_contents major_part">
         <div class="card_figure_summary_actions">
@@ -9,7 +9,7 @@
                         <p >₦40,000,000.00</p>
                     </div>
                     <div class="fund_wallet_container">
-                        <button class="fund_wallet_container__button">
+                        <button (click)="openGeneralCardActions('fund-card')" class="fund_wallet_container__button">
                             Fund Card
                         </button>
                     </div>
@@ -202,7 +202,7 @@
                 </button>  
                 </div>
             </div>
-          
+            <div class="mt-5 h-10 py-5"></div>
         </div>
 
         <div class="mt-5 h-10 py-5"></div>

@@ -27,4 +27,11 @@ export class CardsOverviewComponent implements OnInit {
     })
   }
 
+  toggleCardDetails(){
+    const mainContainer = document.querySelector('.main_container');
+    const mobileViewContainer = document.querySelector('.cards_display_contents.mobile_view');
+    mainContainer?.classList.toggle('show_overlay');
+    mobileViewContainer?.classList.toggle('show');
+  }
+
 }

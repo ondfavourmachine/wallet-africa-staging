@@ -3,7 +3,7 @@
     <div class="cards_display_contents major_part">
         <div class="card_figure_summary_actions">
             <div class="card_figures">
-                <div class=" w-full justify-between items-center">
+                <div class=" w-full justify-start sm:justify-between sm:items-center sm:flex">
                     <div class="wallet_balance_figures">
                         <p class="mb-4"><img class="" src="../../../assets/images/Credit-card.svg" alt="">Card Balance</p>
                         <p >₦40,000,000.00</p>
@@ -40,9 +40,36 @@
                     </div>
             
             </div>
+
         </div>
 
-        <div class="card_transactions mt-10 mb-4">
+        
+        <div class="cards_actions mobile_cards_actions">
+                
+            <a routerLink="/dashboard/cards" class="child">
+                <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
+                <p>Create New Card</p>
+            </a>
+            <div (click)="openGeneralCardActions('withdraw')" class="child">
+                <span class="svg_with_bg"><img src="../../../assets/images/ATM.svg" alt=""></span>
+                <p>Withdraw</p>
+            </div>
+            <div (click)="openGeneralCardActions('block-card')" class="child">
+                <span class="svg_with_bg ">
+                     <img src="../../../assets/images/block_card.svg" alt="">
+                </span>
+                <p>Block Card</p>
+            </div>
+            <div (click)="openGeneralCardActions('change-pin')"  class="child">
+                <span class="svg_with_bg ">  
+                    <img src="../../../assets/images/chnage_pin.svg" alt="">
+                </span>
+                <p>Change Pin</p>
+            </div>
+    
+       </div>
+
+        <div class="card_transactions sm:mt-10 mb-4">
             <div class="recent_transactions__contents">
         
                 <div class="recent_transactions__absent">
@@ -220,7 +247,7 @@
         </div>
 
 
-        <div class="toggle_control">
+        <div (click)="toggleCardDetails()" class="toggle_control">
             <img class="" src="../../../assets/images/card_details.svg" alt="">
         </div>
       

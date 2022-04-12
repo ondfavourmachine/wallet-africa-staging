@@ -350,7 +350,7 @@
 
 
 .main_container, .personal_documents_upload{
-    @apply w-screen sm:w-10/12 h-full px-1 sm:px-6 bg-white;
+    @apply w-screen sm:w-10/12 h-full px-1 sm:px-6 bg-white relative; 
 
     & .header{
         @apply h-auto mb-3 px-1 sm:px-3;
@@ -483,6 +483,23 @@
             }
         
         }
+    }
+
+    &::before{
+        transition: left 250ms ease;
+        transform-origin: left;
+        content: '';
+        z-index: 10;
+        left: 100%;
+        bottom: 0;
+        right: 0;
+        top: 100px;
+        @apply absolute bg-red-200 backdrop-blur-sm;
+    }
+
+    &.show_overlay::before{
+        transition: left 250ms ease;
+        left: 0
     }
 }
 
@@ -1384,8 +1401,8 @@
         }
     }
 
-    & .side_part{
-        @apply hidden sm:col-span-4 h-full px-2;
+    & .side_part, .mobile_view{
+        @apply hidden sm:col-span-4 sm:block h-full px-2 relative;
 
         & .card_details{
             box-shadow: var(--section-shadow);
@@ -1427,6 +1444,43 @@
                 @apply bg-wa-generalGreen;
             }
         }
+
+    }
+
+
+    & .mobile_view{
+        // --size-of-screen: 100vw;
+        transition: transform 350ms ease 350ms;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 20;
+        transform: translateX(92vw);
+        // transition: transform 350ms ease;
+        @apply w-full block absolute sm:hidden h-full px-2;
+
+        & .card_details{
+            @apply bg-white h-full;
+        }
+
+        & .toggle_control{
+            position: absolute;
+            top: 20px;
+            left: -43px;
+            height: 40px;
+            width: 40px;
+            @apply p-1 border-2 border-wa-border-box-color shadow-sm rounded-md;
+        }   
+
+        // &::before{
+        //         content: '';
+        //         background: rgba(71, 64, 78, 0.1);
+        //         // backdrop-filter: blur(4px);
+        //         z-index: -1;
+
+        //         @apply inset-0 w-screen h-screen absolute;
+        // }
     }
 }
 

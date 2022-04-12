@@ -836,6 +836,38 @@
         }
     }
 
+    & .mobile_transactions{
+        & .title{
+                font-family: 'IBM Plex Medium';
+                font-size: 1.295rem;
+                @apply mb-2 pl-1 py-2 font-normal;
+        }
+
+        & .a_mobile_transaction{
+            font-family: var(--wa-commonlyused-font);
+            @apply border border-wa-border-box-color px-4 py-2 mt-2 rounded-md;
+
+            & .transaction_details{
+                @apply flex justify-start gap-5;
+            }
+
+            & .time, .amount{
+                @apply w-full flex gap-1 flex-col;
+            }
+
+            & .transaction_actions{
+                @apply border-t-2 border-wa-placeholder-color w-full mt-2 pt-5 flex gap-5;
+
+                & button{
+                    font-size: 1.2rem;
+                    @apply border border-wa-border-box-color px-3 py-2 cursor-pointer rounded-lg flex gap-2 items-center font-bold ;
+                
+                }
+            }
+        }
+    }
+
+
      //  cards section
 
    & .cards_section{
@@ -1418,6 +1450,7 @@
         }
 
         & .card_transactions{
+            @apply hidden sm:block;
             & .recent_transactions__contents{
                 box-shadow: var(--section-shadow);
             }

@@ -979,7 +979,8 @@
 
 // sidebar styles here
 .sideBar_container{
-    @apply hidden sm:block sm:w-2/12 h-full;
+    transition: width 250ms ease;
+    @apply hidden lg:block sm:w-2/12 h-full;
 }
 
 // mobile side bar here
@@ -993,9 +994,6 @@
       transform: translateX(0);
     }
 }
-
-
-
 
 
 
@@ -1066,7 +1064,6 @@
             &.active{
                 box-shadow: var(--wa-box-shadow);
                 @apply bg-white rounded-lg border-2 border-white text-wa-generalGreen;
-            
             }
 
            & .chevron_down img{
@@ -1111,10 +1108,9 @@
             font-family: var(--wa-commonlyused-font);
             @apply w-full h-auto bg-white border border-wa-border-box-color rounded-[7px] py-4 flex justify-start px-3 gap-3;
         }
-    }
-
-    
+    }  
 }
+
 // ends here
 
 
@@ -1632,6 +1628,54 @@
         font-size: .855em;
         color: rgba(64, 52, 78, 1);
     }
+}
+
+
+// mobile responsiveness for table responsiveness
+
+@media (min-width: 640px) and (max-width: 1024px) {
+    .main_container{
+        @apply w-11/12 px-2;
+    }
+   
+    .sideBar_container{
+        transition: width 250ms ease;
+        width: 60px;
+        @apply overflow-x-hidden block;
+
+       
+    }
+    .sideBar_contents{
+        @apply w-full h-full px-2 ;
+
+        & .image_container{
+            @apply opacity-0;
+        }
+
+        & a{
+            @apply hidden
+        }
+    
+        & ul li{
+            // box-shadow: var(--wa-box-shadow);
+            // background-color: white !important;
+            padding: 0 !important;
+
+            & span{
+                margin-right: 0 !important;
+                // @apply border border-red-500;
+            }
+
+            &.active{
+                padding: 0.5rem !important;
+            }
+        }
+        .contact_us{
+            display: none !important;
+        }
+    } 
+    
+   
 }
 
 

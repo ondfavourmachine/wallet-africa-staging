@@ -5,16 +5,26 @@
     </div> 
     <div class="other_contents">
         <ul >
-            <li  [routerLink] = "['overview']"  [routerLinkActive]="['active']" Sidebar> <span class="" ><img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> Home</li>
-            <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" Sidebar><span><img src="../../../assets/images/Wallet.svg" alt=""></span> Wallets</li>
+            <li  [routerLink] = "['overview']" class="dashboard"  [routerLinkActive]="['active']" Sidebar> 
+                <span class="flex flex-none" >
+                    <img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> 
+                    <a>Home</a>
+                </li>
+            <li [routerLink] = "['wallets']" class="wallets_routes"  [routerLinkActive]="['active']" Sidebar>
+                <span class="flex flex-none"><img src="../../../assets/images/Wallet.svg" alt=""></span> 
+                <a >Wallets</a>
+            </li>
             <li (click)="openAndClose($event)" class="payments"> 
                 <div class="flex w-full items-center justify-between">
-                    <span class="flex"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> Payments</span>  
+                    <span class="flex flex-none"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> <a >Payments</a></span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
                 </div>  
             </li>
             <ul class="sublist payments_sublist">
-                <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>transfer to business</li>
+                <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>
+                   
+                    <a > transfer to business </a>
+                </li>
                 <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>Wallet (Single)</li>
                 <li [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize" Sidebar>bank account (single)</li>
                 <li [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize" Sidebar>mobile money (single)</li>
@@ -24,7 +34,10 @@
             </ul>
             <li (click)="openAndClose($event)" class="transactions">
                 <div class="flex w-full items-center justify-between">
-                    <span class="flex"><img class="mr-3" src="../../../assets/images/Clipboard-list.svg" alt=""> Transactions</span>  
+                    <span class="flex flex-none"><img class="mr-3" src="../../../assets/images/Clipboard-list.svg" alt=""> 
+                        
+                        <a >Transactions</a>
+                    </span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
                 </div> 
             </li>
@@ -32,11 +45,20 @@
                 <li class="capitalize" Sidebar>history</li>
                 <li class="capitalize" Sidebar>reoccuring</li>
             </ul>
-            <li [routerLink] = "['cards']"  [routerLinkActive]="['active']" Sidebar><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Cards</li>
-            <li [routerLink] = "['buy_airtime']"  [routerLinkActive]="['active']" Sidebar><span><img src="../../../assets/images/Credit-card.svg" alt=""></span> Buy Airtime</li>
+            <li [routerLink] = "['cards']"  [routerLinkActive]="['active']" Sidebar>
+                <span class="flex flex-none"><img src="../../../assets/images/Credit-card.svg" alt=""></span> 
+                
+                <a >Cards</a>
+            </li>
+            <li [routerLink] = "['buy_airtime']" [routerLinkActive]="['active']" Sidebar>
+                <span class="flex flex-none">
+                    <img src="../../../assets/images/Credit-card.svg" alt=""></span> 
+                    <a >Buy Airtime</a>
+                </li>
             <li> 
                 <span class="flex-auto flex items-center">
-                    <span><img src="../../../assets/images/Box_3.svg" alt=""></span> More
+                    <span class="flex flex-none"><img src="../../../assets/images/Box_3.svg" alt=""></span> 
+                    <a >More</a>
                 </span>  
                 <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
             </li>

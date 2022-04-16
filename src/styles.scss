@@ -319,7 +319,7 @@
         }
 
         & .boxes_for_personalOrBusiness{
-            @apply flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 px-4 py-2;
+            @apply flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 md:gap-8 px-4 py-2;
 
             & .box_for_personal_wallet, .box_for_business_wallet{
                 font-family: 'IBM Plex Sans Regular';

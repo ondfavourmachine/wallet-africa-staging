@@ -5,16 +5,16 @@
     </div> 
     <div class="other_contents">
         <ul >
-            <li  [routerLink] = "['overview']" class="dashboard"  [routerLinkActive]="['active']" Sidebar> 
+            <li data-tooltip="home"  [routerLink] = "['overview']" class="dashboard tooltip"  [routerLinkActive]="['active']" Sidebar> 
                 <span class="flex flex-none" >
                     <img src="../../../assets/images/Wallet Afri-01_small.svg" alt=""></span> 
                     <a>Home</a>
                 </li>
-            <li [routerLink] = "['wallets']" class="wallets_routes"  [routerLinkActive]="['active']" Sidebar>
+            <li data-tooltip="Wallets" [routerLink] = "['wallets']" class="wallets_routes tooltip"  [routerLinkActive]="['active']" Sidebar>
                 <span class="flex flex-none"><img src="../../../assets/images/Wallet.svg" alt=""></span> 
                 <a >Wallets</a>
             </li>
-            <li (click)="openAndClose($event)" class="payments"> 
+            <li data-tooltip="payments" (click)="openAndClose($event)" class="payments tooltip"> 
                 <div class="flex w-full items-center justify-between">
                     <span class="flex flex-none"><img class="mr-3" src="../../../assets/images/Money.svg" alt=""> <a >Payments</a></span>  
                     <span class="chevron_down"><img src="../../../assets/images/ic24-chevron-down.svg" alt=""></span>
@@ -32,7 +32,7 @@
                 <li class="capitalize" Sidebar>bank account (bulk)</li>
                 <li class="capitalize" Sidebar>mobile money (bulk)</li>
             </ul>
-            <li (click)="openAndClose($event)" class="transactions">
+            <li data-tooltip="transactions" (click)="openAndClose($event)" class="transactions tooltip">
                 <div class="flex w-full items-center justify-between">
                     <span class="flex flex-none"><img class="mr-3" src="../../../assets/images/Clipboard-list.svg" alt=""> 
                         
@@ -45,17 +45,17 @@
                 <li class="capitalize" Sidebar>history</li>
                 <li class="capitalize" Sidebar>reoccuring</li>
             </ul>
-            <li [routerLink] = "['cards']"  [routerLinkActive]="['active']" Sidebar>
+            <li data-tooltip="Cards" [routerLink] = "['cards']" class="tooltip"  [routerLinkActive]="['active']" Sidebar>
                 <span class="flex flex-none"><img src="../../../assets/images/Credit-card.svg" alt=""></span> 
                 
                 <a >Cards</a>
             </li>
-            <li [routerLink] = "['buy_airtime']" [routerLinkActive]="['active']" Sidebar>
+            <li data-tooltip="Airtime" [routerLink] = "['buy_airtime']" class="tooltip" [routerLinkActive]="['active']" Sidebar>
                 <span class="flex flex-none">
                     <img src="../../../assets/images/Credit-card.svg" alt=""></span> 
                     <a >Buy Airtime</a>
                 </li>
-            <li> 
+            <li class="tooltip" data-tooltip="more"> 
                 <span class="flex-auto flex items-center">
                     <span class="flex flex-none"><img src="../../../assets/images/Box_3.svg" alt=""></span> 
                     <a >More</a>

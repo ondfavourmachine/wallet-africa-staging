@@ -980,7 +980,7 @@
 // sidebar styles here
 .sideBar_container{
     transition: width 250ms ease;
-    @apply hidden lg:block sm:w-2/12 h-full;
+    @apply hidden lg:block sm:w-2/12 2xl:max-w-[20rem] h-full;
 }
 
 // mobile side bar here
@@ -1005,7 +1005,7 @@
         @apply relative  h-1/6 lg:h-[100px] w-full flex justify-start sm:justify-center items-center;
 
         & img{
-            width: clamp(55%, 80%, 1.5vw);
+            width: clamp(25%, 80%, 5.5vw);
             // max-width: 80%;    
         }
 
@@ -1072,7 +1072,7 @@
         }
 
         & .payments, .transactions{
-            @apply transition-all mb-0 flex flex-col cursor-pointer h-10 overflow-hidden;
+            @apply transition-all mb-0 flex flex-col cursor-pointer h-10;
             
             & ul{
                 font-family: var(--wa-commonlyused-font);
@@ -1629,19 +1629,57 @@
         color: rgba(64, 52, 78, 1);
     }
 }
+// tool-tip styles
 
+.tooltip{
+    position: relative;
+    cursor: pointer;
+    // ;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0.4em;
+        left: 20%;
+        width: 0;
+        height: 0;
+        z-index: 100;
+        opacity: 0;
+        clip-path: polygon(100% 0, 0 0, 51% 100%);
+        @apply  text-white px-3 py-2 bg-stone-700;
+    }
+
+    &::after{
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 45px;
+        top: -1.75em;
+        opacity: 0;
+        font-size: 0.625rem;
+        font-family: var(--wa-commonlyused-font);
+        z-index: 100;
+        @apply bg-stone-700 text-white px-2 py-1 w-fit rounded-md;
+    }
+
+
+    &:hover::after, &:hover::after{
+        opacity: 1;
+    }
+
+}
+
+// ends here
 
 // mobile responsiveness for table responsiveness
 
 @media (min-width: 640px) and (max-width: 1024px) {
     .main_container{
-        @apply w-11/12 px-2;
+        @apply w-11/12 px-0;
     }
    
     .sideBar_container{
         transition: width 250ms ease;
-        width: 60px;
-        @apply overflow-x-hidden block;
+        width: 65px;
+        @apply  block;
 
        
     }
@@ -1652,26 +1690,50 @@
             @apply opacity-0;
         }
 
+        & .other_contents{
+            // @apply items-center;
+        }
+
         & a{
             @apply hidden
         }
     
-        & ul li{
-            // box-shadow: var(--wa-box-shadow);
-            // background-color: white !important;
-            padding: 0 !important;
+        & ul{
+            padding: 0px !important;
+            @apply flex flex-col gap-5;
+           & li{
+                padding: 0 !important;
+                display: block !important;
+                & span{
+                    margin-right: 0 !important;
+                    justify-content: center;
+                }
+    
+                &.active{
+                    padding: 0.5rem !important;
+                }
 
-            & span{
-                margin-right: 0 !important;
-                // @apply border border-red-500;
+                & .chevron_down{
+                    display: none;
+                }
             }
 
-            &.active{
-                padding: 0.5rem !important;
-            }
+           & ul{
+               margin: -5px;
+           }
+
         }
         .contact_us{
             display: none !important;
+        }
+
+        .payments, .transactions{
+            display: grid !important;
+            place-content: center !important;
+
+            & > div{
+                margin-left: .75rem;
+            }
         }
     } 
     

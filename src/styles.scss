@@ -1258,9 +1258,6 @@
 
 }
 
-
-
-
 // ends here
 
 
@@ -1314,8 +1311,6 @@
         @apply w-full flex justify-center gap-5 items-center my-7;
     }
 }
-
-
 // ends here
 
 // create a card styles
@@ -1661,9 +1656,9 @@
     }
 
 
-    &:hover::after, &:hover::after{
-        opacity: 1;
-    }
+    // &:hover::after, &:hover::after{
+    //     opacity: 1;
+    // }
 
 }
 
@@ -1730,12 +1725,42 @@
         .payments, .transactions{
             display: grid !important;
             place-content: center !important;
+            @apply relative;
 
             & > div{
                 margin-left: .75rem;
             }
         }
+
+        & .payments_sublist.elongate, .transactions_sublist.elongate{
+            z-index: 200;
+            height: auto !important;
+            padding: .25rem .73rem !important;
+            gap: .25rem !important;
+            // background-color: rgba(245, 245, 255, 0.4);
+            backdrop-filter: blur(4px);
+            @apply absolute left-14  w-auto border shadow-md rounded-md;
+
+            & a{
+                display: block !important;
+            }
+            & li{
+                @apply my-2;
+            }
+        }
+
+        & .payments_sublist.elongate{
+            @apply top-[15rem]
+        }
+
+        & .transactions_sublist.elongate{
+            @apply top-[23rem]
+        }
     } 
+
+    .tooltip:hover::after{
+        opacity: 1 !important;
+    }
     
    
 }

@@ -21,16 +21,16 @@
                 </div>  
             </li>
             <ul class="sublist payments_sublist">
-                <li [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>
+                <li (click)="closeOnClickIfOnTablets($event)" [routerLink] = "['transfer-to-business']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>
                    
                     <a > transfer to business </a>
                 </li>
-                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>Wallet (Single)</li>
-                <li [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize" Sidebar>bank account (single)</li>
-                <li [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize" Sidebar>mobile money (single)</li>
-                <li [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>wallet (bulk)</li>
-                <li class="capitalize" Sidebar>bank account (bulk)</li>
-                <li class="capitalize" Sidebar>mobile money (bulk)</li>
+                <li (click)="closeOnClickIfOnTablets($event)" [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>Wallet (Single)</li>
+                <li (click)="closeOnClickIfOnTablets($event)" [routerLink]="['bank-account-single']" [routerLinkActive]="['active']" class="capitalize" Sidebar>bank account (single)</li>
+                <li (click)="closeOnClickIfOnTablets($event)" [routerLink]="['mobile-money']" [routerLinkActive]="['active']" class="capitalize" Sidebar>mobile money (single)</li>
+                <li (click)="closeOnClickIfOnTablets($event)" [routerLink] = "['wallets']"  [routerLinkActive]="['active']" class="capitalize" Sidebar>wallet (bulk)</li>
+                <li (click)="closeOnClickIfOnTablets($event)" class="capitalize" Sidebar>bank account (bulk)</li>
+                <li (click)="closeOnClickIfOnTablets($event)" class="capitalize" Sidebar>mobile money (bulk)</li>
             </ul>
             <li data-tooltip="transactions" (click)="openAndClose($event)" class="transactions tooltip">
                 <div class="flex w-full items-center justify-between">

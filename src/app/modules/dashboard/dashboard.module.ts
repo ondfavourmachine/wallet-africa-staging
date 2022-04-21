@@ -25,7 +25,7 @@ const routes: Routes = [
       { path: 'bank-account-single', component: WalletsComponent},
       { path: 'mobile-money', component: MobileMoneyComponent},
       { path: 'cards', component: CardsComponent},
-      {path: 'settings', component: SettingsComponent}
+      {path: 'settings', component: SettingsComponent},
       { path: 'cards/overview', component: CardsOverviewComponent},
      ]
   },

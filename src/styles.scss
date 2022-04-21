@@ -152,6 +152,10 @@
     &.extra_padding{
         @apply px-12 py-[10px];
     }
+
+    &.upload{
+        @apply bg-transparent px-6 border border-wa-generalGreen rounded-sm ml-0;
+    }
 }
 
 .material_closeBtn{
@@ -1662,9 +1666,71 @@
 
 }
 
+//settings screen
+
+.save_container{
+    @apply w-full py-4 flex justify-end items-center;
+}
+.general_settings{
+    @apply w-full border shadow-sm h-full rounded-md pl-5 pr-7 pt-8 border-wa-border-box-color;
+
+    & .heading{
+        font-size: .875rem;
+        font-family: var(--wa-commonlyused-font);
+        @apply font-semibold mb-3 md:mb-4;
+    }
+
+    & .profile_picture_container{
+        @apply flex flex-col md:flex-row w-full gap-4 pb-4 md:pb-6 border-b border-wa-border-box-color;
+        & .profile_picture{
+            font-family: var(--wa-commonlyused-font);
+            @apply flex gap-2 flex-auto;
+
+            & p{
+                @apply self-center;
+              & span:nth-child(1){
+                font-family: 'IBM Plex SemiBold';
+                font-size: clamp(.875rem, 2vw, 50%);
+              }
+
+              & span:nth-child(2){
+                font-size: clamp(.775rem, 1.5vw, 40%);
+                @apply font-medium;
+              }
+            }
+        }
+
+        & .upload_button{
+            @apply flex-none;
+        }
+    }
+
+    & .settings_form{
+        // grid-template-rows: auto;
+        @apply grid grid-cols-2 gap-5 border-b border-wa-border-box-color;
+
+        .form-control{
+            font-family: 'IBM Plex ExtraLight';
+            font-size: 0.95rem;
+            color: #7B7B9F;
+            @apply  placeholder:text-[#7B7B9F] font-medium w-full bg-wa-input-bg h-10 rounded-[5px] border border-[#DFE4F4];
+        }
+
+        & input{
+            @apply w-full;
+        }
+
+        & select.form-control{
+            @apply bg-transparent;
+        }
+    }
+}
+
 // ends here
 
-// mobile responsiveness for table responsiveness
+// ends here
+
+// tablet responsiveness
 
 @media (min-width: 640px) and (max-width: 1024px) {
     .main_container{

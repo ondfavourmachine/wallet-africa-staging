@@ -11,8 +11,7 @@ import { AirtimeComponent } from 'src/app/components/airtime/airtime.component';
 import { MobileMoneyComponent } from '../../components/mobile-money/mobile-money.component';
 import { CardsComponent } from '../../components/cards/cards.component';
 import { CardsOverviewComponent } from 'src/app/components/cards-overview/cards-overview.component';
-// import { SidebarDirective } from 'src/app/directives/sideBar/sidebar.directive';
-// import { PersonalDocumentsComponent } from 'src/app/components/personal-documents/personal-documents.component';
+import { SettingsComponent } from 'src/app/components/settings/settings/settings.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'overview', pathMatch: 'full'},
@@ -26,6 +25,7 @@ const routes: Routes = [
       { path: 'bank-account-single', component: WalletsComponent},
       { path: 'mobile-money', component: MobileMoneyComponent},
       { path: 'cards', component: CardsComponent},
+      {path: 'settings', component: SettingsComponent}
       { path: 'cards/overview', component: CardsOverviewComponent},
      ]
   },

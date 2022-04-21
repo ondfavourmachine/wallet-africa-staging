@@ -1682,7 +1682,7 @@
         @apply w-full h-full px-2 ;
 
         & .image_container{
-            @apply opacity-0;
+            @apply opacity-0 h-[8.6%];
         }
 
         & .other_contents{
@@ -1760,6 +1760,33 @@
 
     .tooltip:hover::after{
         opacity: 1 !important;
+    }
+
+    .wallet_balance_container{
+        flex-direction: column !important;
+        border-radius: 4px !important;
+        border: 2px solid #DFE4F4 !important;
+
+        & .wallet_balance_figures{
+            width: 100%  !important;
+            // border: 1px solid black;
+        }
+    }
+
+    .fund_wallet_container{
+        justify-content: flex-start !important;
+
+        &__button{
+            padding-inline: .75rem !important;
+        }
+    }
+
+    .verification_incomplete{
+        display: none !important;
+    }
+
+    .mobile_verification_incomplete{
+        display: flex !important;
     }
     
    

@@ -3,7 +3,7 @@
     <div class="cards_display_contents major_part">
         <div class="card_figure_summary_actions">
             <div class="card_figures">
-                <div class=" w-full justify-start sm:justify-between sm:items-center sm:flex">
+                <div class=" w-full justify-start sm:justify-between sm:items-center sm:flex sm:flex-col lg:flex-row">
                     <div class="wallet_balance_figures">
                         <p class="mb-4"><img class="" src="../../../assets/images/Credit-card.svg" alt="">Card Balance</p>
                         <p >₦40,000,000.00</p>
@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="cards_actions">
+            <div class="cards_actions tablet_laptop_cards_actions">
                 
                     <a routerLink="/dashboard/cards" class="child">
                         <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
@@ -47,7 +47,7 @@
         <div class="cards_actions mobile_cards_actions">
                 
             <a routerLink="/dashboard/cards" class="child">
-                <span><img src="../../../assets/images/plus_btn.svg" alt=""></span>
+                <span class="self-start"><img src="../../../assets/images/plus_btn.svg" alt=""></span>
                 <p>Create New Card</p>
             </a>
             <div (click)="openGeneralCardActions('withdraw')" class="child">

@@ -1443,7 +1443,7 @@
         }
 
         & .mobile_cards_actions{
-            @apply w-full rounded-lg border my-4 py-2 border-wa-border-box-color grid grid-cols-12 grid-rows-2 place-items-center gap-3 sm:hidden;
+            @apply w-full rounded-lg border my-4 py-2 border-wa-border-box-color grid grid-cols-12 grid-rows-2 justify-items-start gap-3 sm:hidden;
 
             & .child{
                 @apply col-span-6 relative px-4 flex flex-col justify-center items-center gap-3 py-1;
@@ -1512,7 +1512,7 @@
             }
 
             & .card_information{  
-                @apply px-4 mb-4;
+                @apply pl-3 pr-8 sm:px-4 mb-4;
 
                 & h6{
                     font-family: 'IBM Plex Sans Regular';
@@ -1788,6 +1788,39 @@
     .mobile_verification_incomplete{
         display: flex !important;
     }
+
+    .CreateACard {
+        width: 90vw !important;
+        max-width: 95vw !important;
+        
+    }
+
+    .card_figures{
+        & .wallet_balance_figures{
+            width: 100% !important;
+        }
+        & .fund_wallet_container{
+            width: 100% !important;
+        }
+    }
+
+    .tablet_laptop_cards_actions{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important;
+        gap: .25rem !important;
+
+        .child{
+            flex-direction: row !important;
+            justify-content: unset !important;
+            align-items: center !important;
+            padding-left: .25rem !important;
+            padding-right: .25rem !important;
+            gap: 1rem !important;
+        }
+    }
+    
+
     
    
 }

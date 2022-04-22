@@ -1672,12 +1672,17 @@
     @apply w-full py-4 flex justify-end items-center;
 }
 .general_settings{
-    @apply w-full border shadow-sm h-full rounded-md pl-5 pr-7 pt-8 border-wa-border-box-color;
+    @apply w-full border shadow-sm min-h-screen rounded-md pl-5 pr-7 pt-8 border-wa-border-box-color;
 
     & .heading{
         font-size: .875rem;
         font-family: var(--wa-commonlyused-font);
         @apply font-semibold mb-3 md:mb-4;
+    }
+
+    & .sub_heading{
+        font-size: .775rem;
+        @apply text-wa-paragraph-text-color block;
     }
 
     & .profile_picture_container{
@@ -1705,9 +1710,9 @@
         }
     }
 
-    & .settings_form{
+    & .settings_form, .change_password{
         // grid-template-rows: auto;
-        @apply grid grid-cols-2 gap-5 border-b border-wa-border-box-color;
+        @apply grid grid-cols-1 grid-rows-1  md:grid-cols-2 gap-5 pb-4 border-b border-wa-border-box-color;
 
         .form-control{
             font-family: 'IBM Plex ExtraLight';
@@ -1722,6 +1727,49 @@
 
         & select.form-control{
             @apply bg-transparent;
+        }
+    }
+
+    & .change_password{
+        @apply grid grid-cols-1 grid-rows-4 md:grid-rows-1 md:grid-cols-12 justify-items-center gap-3 content-center pt-1;
+
+        & input{
+            @apply w-full;
+        }
+
+        & div:nth-child(1){
+            @apply md:col-span-3 ;
+        }
+
+        & div:nth-child(2){
+            @apply md:col-span-4;
+        }
+        & div:nth-child(3){
+            @apply md:col-span-3;
+        }
+
+        & div:nth-child(4){
+            @apply md:col-span-2 flex justify-end;
+
+            & button{
+                @apply w-full md:w-auto;
+            }
+
+        }
+    }
+
+
+    & .notifications_form{
+        @apply grid gap-4 grid-cols-1 grid-rows-3 md:grid-cols-12 md:grid-rows-1 border-b border-wa-border-box-color;
+
+        & .form-group{
+            @apply col-span-4;
+        }
+
+        & .form-control{
+            font-family: 'IBM Plex ExtraLight';
+            font-size: 0.95rem;
+            @apply  placeholder:text-[#7B7B9F] font-medium  rounded-[5px] border border-[#DFE4F4];
         }
     }
 }

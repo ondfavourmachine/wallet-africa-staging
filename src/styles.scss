@@ -1672,7 +1672,7 @@
     @apply w-full py-4 flex justify-end items-center;
 }
 .general_settings{
-    @apply w-full border shadow-sm min-h-screen rounded-md pl-5 pr-7 pt-8 border-wa-border-box-color;
+    @apply w-full border shadow-sm min-h-min rounded-md pl-5 pr-7 pt-8 border-wa-border-box-color;
 
     & .heading{
         font-size: .875rem;
@@ -1683,6 +1683,11 @@
     & .sub_heading{
         font-size: .775rem;
         @apply text-wa-paragraph-text-color block;
+    }
+
+    & a{
+        font-size: .85rem;
+        @apply underline cursor-pointer text-wa-purple-text-color;
     }
 
     & .profile_picture_container{

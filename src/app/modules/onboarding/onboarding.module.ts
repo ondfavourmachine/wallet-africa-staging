@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OnboardingComponent } from 'src/app/components/onboarding/onboarding.component';
 import { BusinessOnboardingHomeComponent } from 'src/app/components/business-onboarding-home/business-onboarding-home.component';
 import { SharedModule } from '../shared/shared.module';
+import { WalletSetupComponent } from '../../components/wallet-setup/wallet-setup.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'overview', pathMatch: 'full'},
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'business-type-preview', pathMatch: 'full'},
       { path: 'business-type-preview', component: OnboardingComponent},
+      { path: 'wallet-setup-for-business', component: WalletSetupComponent},
       // { path: 'wallets', component: WalletsSingleBulkComponent},
       // { path: 'buy_airtime', component: AirtimeComponent},
       // { path: 'transfer-to-business', component: TransferToBusinessComponent},
@@ -26,7 +28,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     OnboardingComponent,
-    BusinessOnboardingHomeComponent
+    BusinessOnboardingHomeComponent,
+    WalletSetupComponent
   ],
   imports: [
     CommonModule,

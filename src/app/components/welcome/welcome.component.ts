@@ -17,4 +17,8 @@ export class WelcomeComponent implements OnInit {
     this.router.navigate(['/signin']);
   }
 
+  gotoBusinessRegistration(){
+    this.router.navigate(['/business']);
+  }
+
 }

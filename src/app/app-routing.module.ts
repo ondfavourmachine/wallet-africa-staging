@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'personal-documents', component: PersonalDocumentsComponent},
   { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
+  { path: 'business', loadChildren: () => import('./modules/onboarding/onboarding.module').then(m => m.OnboardingModule)},
 ];
 
 @NgModule({

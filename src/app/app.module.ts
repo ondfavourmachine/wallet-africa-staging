@@ -9,6 +9,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { PersonalDocumentsComponent } from './components/personal-documents/personal-documents.component';
+
 // import { SidebarDirective } from './directives/sideBar/sidebar.directive';
 
 

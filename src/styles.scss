@@ -226,12 +226,22 @@
               & .welcome_title{
                 font-family: 'IBM Plex Sans Regular';
                 @apply font-medium mb-1 w-full sm:w-auto flex justify-center items-center sm:block;
+
+                &.onboarding_welcome_title{
+                   font-family: 'IBM Plex Medium';
+                   @apply font-medium text-center;
+                }
                }
               & .welcome_title_supportingText{
                 font-family: 'IBM Plex Sans Regular';
                 font-size: .975rem;
                 @apply font-normal px-2 text-center sm:text-left;
-            }
+
+                &.onbaording_home_supporting{
+                    @apply text-center opacity-60;
+                }
+              }
+            
           }
 
          & .forms_content{
@@ -320,6 +330,55 @@
 
         & .boxes{
             @apply h-[50vh] w-full flex justify-center items-center;
+        }
+
+        & .onboarding_boxes{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+            @apply h-auto w-full gap-5;
+
+            & .first_box,.second_box,.third_box,.fourth_box{
+                @apply shadow-sm bg-white rounded-lg min-h-[288px] p-5 ;
+                & .heading {
+                    @apply flex flex-col border-b border-slate-300 pb-2;
+                    & P{
+                    font-family: 'IBM Plex Medium';
+                    font-size: 1.35rem;
+                    @apply flex font-semibold justify-between items-center;
+                    }
+
+                    & small{
+                        font-family: 'IBM Plex Sans Regular';
+                        font-size: .675rem;
+                        @apply text-[#222222] text-left font-medium;
+                    }
+                }
+
+                & .fake_inputs{
+                    @apply w-full my-3; 
+                    & .a_fake_input{
+                        font-family: 'IBM Plex Light';
+                        font-size: 1rem;
+                        @apply w-full font-semibold flex gap-3 py-[5px] justify-start items-center;
+                    }
+
+                    & input{
+                        @apply pointer-events-none;
+                    }
+                }
+
+                & .fake_button{
+                    @apply my-4 w-full;
+
+                    & a{
+                        font-family: 'IBM Plex Light';
+                        font-size: .885rem;
+                        @apply w-full block py-2 text-center bg-wa-purple-text-color rounded-[3px] text-white;
+                    }
+                }
+
+                
+            }
         }
 
         & .boxes_for_personalOrBusiness{

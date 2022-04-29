@@ -9,8 +9,8 @@ const routes: Routes = [
   // { path: '', redirectTo: 'overview', pathMatch: 'full'},
   { path: '', component: BusinessOnboardingHomeComponent,
     children: [
-      { path: '', redirectTo: 'select-business-type', pathMatch: 'full'},
-      { path: 'select-business-type', component: OnboardingComponent},
+      { path: '', redirectTo: 'business-type-preview', pathMatch: 'full'},
+      { path: 'business-type-preview', component: OnboardingComponent},
       // { path: 'wallets', component: WalletsSingleBulkComponent},
       // { path: 'buy_airtime', component: AirtimeComponent},
       // { path: 'transfer-to-business', component: TransferToBusinessComponent},

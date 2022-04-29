@@ -335,7 +335,7 @@
         & .onboarding_boxes{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-            @apply h-auto w-full gap-5;
+            @apply h-auto w-full gap-5 mt-10;
 
             & .first_box,.second_box,.third_box,.fourth_box{
                 @apply shadow-sm bg-white rounded-lg min-h-[288px] p-5 ;
@@ -378,6 +378,17 @@
                 }
 
                 
+            }
+        }
+
+        & .start_onboarding_container{
+            @apply h-40 w-full flex justify-end items-end mt-5 py-5;
+
+            & .button{
+                font-family: 'IBM Plex Sans ExtraLight';
+                font-size: .888rem;
+                @apply transition-all font-semibold bg-[#F0F4FD] cursor-pointer px-5 py-2 rounded-sm hover:shadow-md hover:bg-wa-purple-text-color hover:text-white;
+
             }
         }
 

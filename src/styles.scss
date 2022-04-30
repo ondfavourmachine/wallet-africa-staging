@@ -2014,6 +2014,56 @@
    
 }
 
+// Business wallet setup styles here
+.main_body{
+    @apply flex gap-2 w-full h-full;
+    & article{
+        @apply  w-3/12 h-full flex justify-center px-10;
+
+        & div{
+            background-color:  rgba(226,216,243, 0.3);
+            @apply h-max mt-2;
+
+            & ul{
+                @apply w-full pl-2 pb-14;
+
+                & li{
+                    font-family: 'IBM Plex Light';
+                    @apply h-16 relative flex items-end pb-1 pl-5 text-[#3C0280] font-semibold;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: -8px;
+                        top: 0;
+                        background-color: black;
+                        background: linear-gradient(12deg, #5C2799 0%, rgba(92, 39, 153, 0) 100%);
+                        height: 100%;
+                        width: 5px;
+                    }
+
+                    &.inactive_state{
+                        @apply opacity-20;
+                    }
+                }
+
+                
+
+                // & li:last-child{
+                //     @apply mb-5;
+                // }
+            }
+        }
+
+    }
+
+    & div{
+        @apply w-9/12 bg-yellow-900 h-full;
+    }
+}
+
+// ends here
+
 
 
 

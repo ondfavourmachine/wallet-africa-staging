@@ -1,11 +1,11 @@
-<main class="w-screen h-screen overflow-y-auto pl-6 pr-3 pt-2">
+<main class="w-screen h-screen overflow-hidden pl-10 pr-3 pt-2">
     <div class="main_container !px-0 !w-full">
         <div class="header">
            <app-header [headerInfo]="headerInfo"></app-header>
         </div>
 
         <section class="main_body">
-            <article>
+            <article class="side_piece">
                 <div>
                     <ul>
                         <li class="inactive_state"><a>Company Information</a></li>
@@ -17,8 +17,164 @@
                     </ul>
                 </div>
             </article>
-            <div></div>
+            <div class="main_content">
+                <div class="main_content__child">
+                    <div class="salutation">
+                        <h2>Hi John, 👋🏽 tell us about your company</h2>
+                        <small>Kindly tell us about your business.</small>
+                    </div>
+
+                    <div class="company_information_gathering">
+                        <div class="wallet_type">
+                            What type of company wallet?
+                        </div>
+                        <div class="company_type">
+                            <div class="a_company_type">
+                                NGO
+                            </div>
+                            <div class="a_company_type">
+                                Limited Liability
+                            </div>
+                            <div class="a_company_type">
+                                Sole Proprietorship
+                            </div>
+                            <div class="a_company_type selected">
+                                Partnership
+                            </div>
+                        </div>
+
+                        <div class="enter_company_information">
+                            <div class="registered_name">
+                                Registered business name
+                            </div>
+                            <p>
+                                This must be the name on your registered documents, You will not be able to change this later. 
+                            </p>
+    
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter the name of your company" autofocus class="form-control">
+                            </div>
+                        </div>
+                        <div class="enter_company_information">
+                            <div class="registered_name">
+                                Tell us about the industry you work
+                            </div>
+                            <p>
+                                Choose the indsutry closest to the one in which your company operates. 
+                            </p>
+    
+                            <div class="form-group">
+                                <select type="text"  
+                                  class="form-control !bg-transparent">
+                                    <option value="" selected>Select Industry</option>
+                                    <option value="">Fashion and Beauty</option>
+                                    <option value="">Automobile </option>
+                                    <option value="">IT and Communication</option>
+                                    <option value="">Fintech</option>
+                                    <option value="">Import and Export</option>
+                                    <option value="">Logistics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="enter_company_information">
+                            <div class="registered_name">
+                                About your business
+                            </div>
+                            <p>
+                                Tell us  about your business, product and/ services you offer in few sentences. 
+                            </p>
+    
+                            <div class="form-group">
+                                <textarea name="" class="" id="" placeholder="Enter some text" cols="30" rows="5"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <select type="text" placeholder="" 
+                                  class="form-control !bg-transparent">
+                                    <option value="">Select Business Type</option>
+                                    <option value="">100 - 500</option>
+                                    <option value="">500 - 1,000,000,000</option>
+                                    <option value="">1,000,000-5,000,000</option>
+                                    <option value="">5,000,000-10,000,000</option>
+                                    <option value="">10,000,000-15,000,000</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Years of Operation" autofocus class="form-control">
+                            </div>
+                            
+                        </div>
+
+                        
+                        <div class="enter_company_information">
+                            <div class="registered_name">
+                                Verify your business location
+                            </div>
+                            <p>
+                                Provide your business address and attach utility bill associated
+                                to the address.
+                            </p>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Address" autofocus class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="City" autofocus class="form-control">
+                            </div>
+
+                            <div class="form-group mt-2 flex gap-2">
+                                <select type="text"  
+                                class="form-control !bg-transparent">
+                                  <option value="" selected>Select State</option>
+                                  <option value="">Fashion and Beauty</option>
+                                  <option value="">Automobile </option>
+                                  <option value="">IT and Communication</option>
+                                  <option value="">Fintech</option>
+                                  <option value="">Import and Export</option>
+                                  <option value="">Logistics</option>
+                              </select>
+
+                              <select type="text"  
+                              class="form-control !bg-transparent">
+                                <option value="" selected>Select Country</option>
+                                <option value="">Fashion and Beauty</option>
+                                <option value="">Automobile </option>
+                                <option value="">IT and Communication</option>
+                                <option value="">Fintech</option>
+                                <option value="">Import and Export</option>
+                                <option value="">Logistics</option>
+                            </select>
+                            </div>
+                            
+                        </div>
+
+                        <div class="enter_company_information">
+                            <div class="registered_name">
+                                Attach Utility Bill
+                            </div>
+                            <div class="pl-2 relative border border-[#1C375A29] py-2 ml-4 rounded-[3px] flex">
+                                <label class="upload_trigger" for="upload">Upload Files...</label>
+                                <input type="file" id="upload" placeholder="" class="form-control !w-auto !bg-transparent">
+                                <span class="secondary_text w-40"><img class="max-w-[75%]" src="../../../assets/images/upload_icon.svg" alt="">  Drop Files here</span>
+                            </div>
+                        </div>
+
+                        <div class="button_container">
+                            <button >
+                                Save & Continue
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
         </section>
+
+        <!-- <div class="h-40 mt-20"></div> -->
     </div>
 
 </main>

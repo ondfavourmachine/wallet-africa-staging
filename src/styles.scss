@@ -2016,9 +2016,9 @@
 
 // Business wallet setup styles here
 .main_body{
-    @apply flex gap-2 w-full h-full;
+    @apply flex gap-2 w-full h-auto;
     & article{
-        @apply  w-3/12 h-full flex justify-center px-10;
+        @apply  w-3/12 h-full flex justify-start px-3 mt-2;
 
         & div{
             background-color:  rgba(226,216,243, 0.3);
@@ -2046,19 +2046,133 @@
                         @apply opacity-20;
                     }
                 }
-
-                
-
-                // & li:last-child{
-                //     @apply mb-5;
-                // }
             }
         }
 
     }
 
-    & div{
-        @apply w-9/12 bg-yellow-900 h-full;
+    & .main_content{
+        @apply w-9/12 h-auto px-1 flex justify-end;
+
+        &__child{
+          @apply  w-10/12 h-auto;
+
+          & .salutation{
+                @apply w-full font-medium text-black mt-1 mb-4;
+
+                & h2{
+                    font-family: 'IBM Plex Sans Regular';
+                    font-size: 1.5rem;
+                    @apply font-semibold;
+                }
+                & small{
+                    font-family: 'IBM Plex Sans ExtraLight';
+                    font-size: .875rem;
+                    @apply font-semibold opacity-70;
+                    // @apply 
+                }
+           }
+
+          & .company_information_gathering{ 
+              @apply w-full border-2 border-wa-border-box-color rounded-md h-[72vh] hover:overflow-auto shadow-sm;
+
+                & .wallet_type, .registered_name{
+                    font-size: .895rem;
+                    font-family: var(--wa-commonlyused-font);
+                    @apply w-full py-3 px-4 text-wa-paragraph-text-color border-b border-[#DFE4F4] font-semibold;
+                }
+
+                & .enter_company_information{
+                    @apply border-b border-[#dfe4f4] pb-4;
+
+
+                    & #upload{
+                        z-index: -1;
+                        @apply absolute opacity-0;
+                    }
+
+                    & .upload_trigger{
+                        background: #193B670D;
+                        font-family: 'Inter Light';
+                        @apply cursor-pointer text-[#1676F3] px-4 py-2 rounded-sm;
+                    }
+
+                    & .secondary_text{
+                        font-size: .875rem;
+                        font-family: 'Inter Light';
+                        color: #1B2B41B8;
+                        @apply flex gap-2 items-center justify-center;
+                    }
+                }
+
+                & .registered_name{
+                    @apply border-0;
+                }
+
+                & .form-group{
+                    font-family: var(--wa-commonlyused-font);
+                    @apply px-4 my-3 w-full;
+
+                    & input, select, textarea{
+                        @apply bg-[#dfe4f4] rounded-md w-full border border-wa-border-box-color;
+                    }
+                }
+
+                & p{
+                    font-family: var(--wa-commonlyused-font);
+                    font-size: .895rem;
+                    @apply leading-5 text-black opacity-50 break-words px-4 w-3/5 placeholder:text-wa-placeholder-color;
+                }
+
+                & .company_type{
+                    @apply h-auto w-full gap-2 grid grid-cols-2 grid-rows-2 px-4 mt-4 pb-4 text-center border-b border-[#DFE4F4];
+
+                    & .a_company_type{
+                        font-family: var(--wa-commonlyused-font);
+                        font-size: 1rem;
+                        @apply py-3 bg-[#F2F4FB] rounded-sm text-wa-placeholder-color;
+
+                        &.selected{
+                            @apply text-wa-purple-text-color font-bold shadow-md border border-wa-purple-text-color;
+                        }
+                    }
+                }
+
+
+                & .button_container{
+                    @apply mt-10 mb-4 px-4;
+                    & button{
+                        font-family: 'IBM Plex Sans ExtraLight';
+                        @apply bg-wa-purple-text-color text-white py-2 font-semibold px-5 rounded-[3px];
+                    }
+                }
+
+
+                &::-webkit-scrollbar {
+                    width: .575em;
+                    // opacity: 0;
+                    // transition: all 250ms ease-in-out;
+                  }
+                   
+                &::-webkit-scrollbar-track {
+                background-color: rgba(153, 153, 153, 0.1);
+                
+                }
+                   
+                &::-webkit-scrollbar-thumb {
+                background-color: rgba(153, 153, 153, 0.35);
+                border-radius: 8px;
+                @apply h-16;
+                }
+
+                // &:hover::-webkit-scrollbar {
+                //     opacity: 100;
+                //   }
+          }
+
+        }
+
+        
     }
 }
 

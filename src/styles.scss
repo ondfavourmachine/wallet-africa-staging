@@ -2016,9 +2016,9 @@
 
 // Business wallet setup styles here
 .main_body{
-    @apply flex gap-2 w-full h-auto;
+    @apply sm:flex sm:gap-2 w-full h-auto;
     & article{
-        @apply  w-3/12 h-full flex justify-start px-3 mt-2;
+        @apply  w-3/12 h-full hidden sm:flex sm:justify-start px-3 mt-2;
 
         & div{
             background-color:  rgba(226,216,243, 0.3);
@@ -2052,10 +2052,10 @@
     }
 
     & .main_content{
-        @apply w-9/12 h-auto px-1 flex justify-end;
+        @apply w-full sm:w-9/12 h-auto px-1 sm:flex sm:justify-end md:justify-start;
 
         &__child{
-          @apply  w-10/12 h-auto overflow-hidden;
+          @apply w-full  sm:w-10/12 md:w-full h-auto overflow-hidden;
 
           &.secondPage .add_more_info{
             font-family: 'IBM Plex Sans ExtraLight';
@@ -2087,7 +2087,7 @@
 
           & .company_information_gathering{ 
             //    scroll-behavior: smooth;
-              @apply w-full border-2 border-wa-border-box-color rounded-md h-[67vh] hover:overflow-auto shadow-sm;
+              @apply w-full border-2 border-wa-border-box-color rounded-md h-[73vh] sm:h-[67vh] md:h-[81vh] hover:overflow-auto shadow-sm;
 
                 & .wallet_type, .registered_name{
                     font-size: .895rem;
@@ -2194,6 +2194,48 @@
         }
 
         
+    }
+
+    
+}
+
+.bottomProgressIndicator{
+    box-shadow: 0px -6px 5px -4px rgba(149, 157, 165, 0.102); 
+    @apply transition-all absolute bg-white h-64 left-0 right-0 -bottom-48 w-full flex sm:hidden;
+
+    & ul{
+        @apply flex gap-1 h-auto self-start mt-2;
+
+        & li{
+            font-family: var(--wa-commonlyused-font);
+            @apply transition-all text-center flex opacity-40 font-medium relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                background: rgba(92, 39, 153, 0.1);
+                @apply h-2 w-full -top-2;
+            }
+
+            &.selected{
+                @apply opacity-100 font-bold text-wa-purple-text-color;
+
+                &::before{
+                    background: linear-gradient( #5C2799 50%, rgba(92, 39, 153, 0) 50%);
+                }
+            }
+        }
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 100;
+        @apply w-12 h-9 bg-white right-1 rounded-t-lg -top-9 border border-[#959da51a];
+    }
+
+    &.slide_down{
+        @apply h-[12.5rem];
     }
 }
 

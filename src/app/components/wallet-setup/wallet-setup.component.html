@@ -1,4 +1,4 @@
-<main class="w-screen h-screen overflow-hidden pl-10 pr-3 pt-2">
+<main class="w-screen h-screen overflow-hidden px-2 sm:pl-10 sm:pr-3 pt-2 relative">
     <div class="main_container !px-0 !w-full">
         <div class="header">
            <app-header [headerInfo]="headerInfo"></app-header>
@@ -465,10 +465,23 @@
                 </div>
             </div>
 
-            
+           
         </section>
 
         <!-- <div class="h-40 mt-20"></div> -->
     </div>
 
+    <div class="bottomProgressIndicator">
+        <ul>
+            <li class=" selected">
+                <a>Company Information</a></li>
+            <li class=""> 
+                <a >Owner’s Information</a>
+            </li>
+            <li class=""> 
+                <a >Business Documentation</a>
+            </li>
+            <li class=""> <a >Review & Submit</a> </li>
+        </ul>
+    </div> 
 </main>

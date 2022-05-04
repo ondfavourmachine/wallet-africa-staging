@@ -2055,7 +2055,19 @@
         @apply w-9/12 h-auto px-1 flex justify-end;
 
         &__child{
-          @apply  w-10/12 h-auto;
+          @apply  w-10/12 h-auto overflow-hidden;
+
+          &.secondPage .add_more_info{
+            font-family: 'IBM Plex Sans ExtraLight';
+            @apply flex justify-between w-full pr-1 mb-2 font-bold;
+
+            & a{
+                @apply underline text-wa-purple-text-color cursor-pointer;
+            }
+            & a:last-child{
+                @apply no-underline;
+            }
+          }
 
           & .salutation{
                 @apply w-full font-medium text-black mt-1 mb-4;
@@ -2074,7 +2086,8 @@
            }
 
           & .company_information_gathering{ 
-              @apply w-full border-2 border-wa-border-box-color rounded-md h-[72vh] hover:overflow-auto shadow-sm;
+            //    scroll-behavior: smooth;
+              @apply w-full border-2 border-wa-border-box-color rounded-md h-[67vh] hover:overflow-auto shadow-sm;
 
                 & .wallet_type, .registered_name{
                     font-size: .895rem;
@@ -2116,6 +2129,10 @@
                     & input, select, textarea{
                         @apply bg-[#dfe4f4] rounded-md w-full border border-wa-border-box-color;
                     }
+
+                    & input[type="radio"]:checked{
+                        @apply bg-wa-purple-text-color outline-wa-purple-text-color;
+                    }
                 }
 
                 & p{
@@ -2140,7 +2157,11 @@
 
 
                 & .button_container{
-                    @apply mt-10 mb-4 px-4;
+                    @apply mt-10 mb-4 px-4 flex gap-5;
+                    & .cancel{
+                        font-family: 'IBM Plex Sans ExtraLight';
+                        @apply transition-all border-0 bg-white text-wa-purple-text-color font-extrabold hover:border hover:border-wa-purple-text-color;
+                    }
                     & button{
                         font-family: 'IBM Plex Sans ExtraLight';
                         @apply bg-wa-purple-text-color text-white py-2 font-semibold px-5 rounded-[3px];

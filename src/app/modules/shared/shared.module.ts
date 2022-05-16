@@ -10,6 +10,9 @@ import { TransferSuccessfullComponent } from '../../components/transfer-successf
 import { CreateACardComponent } from '../../components/create-a-card/create-a-card.component';
 import { CardsActionComponent } from '../../reusables/cards-action/cards-action.component';
 import { SidebarDirective } from 'src/app/directives/sideBar/sidebar.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 
@@ -29,6 +32,8 @@ import { SidebarDirective } from 'src/app/directives/sideBar/sidebar.directive';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
     MatDialogModule
   ],
   exports: [
@@ -40,7 +45,9 @@ import { SidebarDirective } from 'src/app/directives/sideBar/sidebar.directive';
     ReactiveFormsModule,
     SidebarComponent,
     HeaderComponent,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule,
+    MatSnackBarModule
     
   ]
 })

@@ -22,7 +22,7 @@
                 <form [formGroup]="loginForm" class="forms_content signup w-full h-4/6">
                     <div class="form-group w-full">
                         <input 
-                        formControlName="username"
+                        formControlName="Email"
                          placeholder="Phone Number or Email Address" type="text" class="form-control mb-1">
                         <!-- <span class="mx-2 bg-[#EEFDF4] rounded-md inline-flex items-center justify-around px-1"> <img src="../../../assets/images/checkmark.svg" alt=""> <small class="capitalize ml-1  text-wallet-generalGreen">uppercase letter</small></span>
                         <span class="mx-2 bg-[#EEFDF4] rounded-md inline-flex items-center justify-around px-1"> <img src="../../../assets/images/checkmark.svg" alt=""> <small class="capitalize ml-1  text-wallet-generalGreen">lowercase letter</small></span>
@@ -30,12 +30,16 @@
                         <span class=" px-2 inline-block rounded-md">  <small class="capitalize px-3  bg-[#f5f5ff] text-wallet-mutedText">special characters</small></span> -->
                     </div>
                     <div class="form-group w-full">
-                        <input formControlName="password" placeholder="Password" type="password" class="form-control">
+                        <input formControlName="Password" placeholder="Password" type="password" class="form-control">
+                    </div>
+
+                    <div class="form-group w-full">
+                        <input formControlName="Otp" placeholder="Otp" type="password" class="form-control">
                     </div>
                 </form>
 
                 <div class="w-full submitBtn mt-3 sm:mt-10 flex justify-end items-center pb-5 sm:pb-1 pr-3">
-                    <button type="button" (click)="loginUser()" class="reusable_button ml-0 capitalize">Sign In</button>
+                    <button [disabled]="!loginForm.valid" type="button" (click)="loginUser()" class="reusable_button ml-0 capitalize">Sign In</button>
                 </div> 
             </div>
         </div>
